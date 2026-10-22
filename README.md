@@ -2,7 +2,7 @@
 
 **Read any company from the outside before you invest, join or buy it.**
 
-Cold Read is a skill for AI coding agents (Claude Code, Codex and anything else that reads the Agent Skills format, with rule files for Cursor and GitHub Copilot). Point it at a company and it reads the public record in six lanes, marks every claim as cited, inferred or unknown, and writes a dated reading in the order a busy reader needs: the answer, the evidence, the comparables, what it means for you, and the signals that would prove it wrong.
+Cold Read is an add-on for Claude Code, Codex and Cursor (and anything else that reads the Agent Skills format, with a rule file for GitHub Copilot). Point it at a company and it reads the public record in six places at once, marks every line as sourced, inferred or not found, and writes one dated note: the answer first, then the evidence, then what it means for you, then the dates that would prove it wrong.
 
 Site with example views: https://me2resh.github.io/cold-read/
 

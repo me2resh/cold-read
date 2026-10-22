@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cold Read</title>
-<meta name="description" content="Read any company from the outside before you invest, join or buy it. A skill for AI coding agents that works from the public record and marks every claim.">
+<meta name="description" content="Read any company from the outside before you invest, interview or buy. An add-on for Claude Code, Codex and Cursor that reads the public record and shows its sources on every line.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
@@ -131,22 +131,22 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 <header>
   <div>
     <h1>Read any company from the outside.</h1>
-    <p class="tag">Before you invest in it, join it or buy it. A skill for AI coding agents that works from the public record alone and marks every claim.</p>
-    <div class="cta"><a class="primary" href="#install">Install</a><a class="quiet" href="#views">See an example read</a></div>
+    <p class="tag">Before you invest in it, interview with it or buy it. An add-on for Claude Code, Codex and Cursor that reads the public record and shows its sources on every line.</p>
+    <div class="cta"><a class="primary" href="#install">Install</a><a class="quiet" href="#views">See a finished read</a></div>
   </div>
   <div class="ledger" aria-label="Example of a says-versus-does ledger">
-    <div class="head"><span>What the company said</span><span>What it did</span><span></span></div>
+    <div class="head"><span>What they said</span><span>What they did</span><span></span></div>
     <div class="row"><div class="said">"Kerbline will keep its brand and roadmap."<span class="when">CEO, deal call, June 2025</span></div><div class="did">Pricing page redirects to the acquirer's site.<span class="when">Archived copy, January 2026</span></div><span class="mark ok" title="Cited">✓</span></div>
     <div class="row"><div class="said">"Two great engineering teams."<span class="when">CTO interview, September 2025</span></div><div class="did">Ad: "bringing two engineering organisations together."<span class="when">Job board, February 2026</span></div><span class="mark ok" title="Cited">✓</span></div>
     <div class="row"><div class="said">"No change for customers."<span class="when">Customer email, June 2025</span></div><div class="did">Privacy page now names the acquirer as controller; migration likely within a year.<span class="when">Inferred from three signals</span></div><span class="mark inf" title="Inferred">~</span></div>
     <div class="row"><div class="said">"Breakeven next year."<span class="when">CFO, results call</span></div><div class="did">No segment margin disclosed yet.<span class="when">Nothing to check until March</span></div><span class="mark unk" title="Unknown">?</span></div>
-    <div class="cap"><b>✓ cited</b> to a source read today. <b>~ inferred</b> from the record. <b>? unknown</b> after looking. Every claim carries one. The company is invented.</div>
+    <div class="cap">Every line carries one of three marks. <b>✓</b> a source, read and linked. <b>~</b> inferred from the record. <b>?</b> not found. Sample company.</div>
   </div>
 </header>
 
 <section id="how">
   <h2>A company cannot hide its plan</h2>
-  <p class="lead">It is in what it files, what it hires for, what it ships, what it tells investors, and what happened to companies like it. Cold Read reads six lanes, in parallel when the agent has sub-agents, and writes one note in the order a busy reader needs: the answer, the evidence, the comparables, what it means for you, and the dated signals that would prove it wrong.</p>
+  <p class="lead">It is in what it files, what it hires for, what it ships, what it tells investors, and what happened to companies like it. Cold Read reads those six places at once and writes one note: the answer first, then the evidence, then what it means for you, then the dates that would prove it wrong.</p>
   <ul class="lanes">
     <li><b>Corporate record</b><em>Who owns it, what it bought or sold and for how much, who runs it, how much cash and debt.</em><span>Securities filings, company registries, deal releases, director changes.</span></li>
     <li><b>Counterparty or product</b><em>The other side of a deal in the same depth, or products, pricing, customers and money.</em><span>Filings for the other party, pricing pages, app stores, customer counts.</span></li>
@@ -159,7 +159,7 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 </section>
 
 <section id="uses">
-  <h2>Four questions it answers</h2>
+  <h2>Four questions it is built for</h2>
   <div class="uses">
     <div><h3>Invest</h3><p class="q">What did they pay for, and is it worth it?</p><p class="o">Price against what was bought, the earn-out as a signal, the dated calls that settle it.</p></div>
     <div><h3>Join</h3><p class="q">What would I inherit, and who will I meet?</p><p class="o">Stack by chapter, the mandate, questions by round, one-line reads of each person.</p></div>
@@ -169,8 +169,8 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 </section>
 
 <section id="views">
-  <h2>Example reads</h2>
-  <p class="lead">Excerpts from the four worked outputs in the repository. Every company, person, number and source is invented to show the shape of a reading; nothing describes a real company.</p>
+  <h2>What a finished read looks like</h2>
+  <p class="lead">Four sample reads, one for each question. The full versions ship with the skill.</p>
   <div class="tabs" role="tablist" data-group="v">
     <button role="tab" aria-selected="true" data-v="deal">Deal</button>
     <button role="tab" aria-selected="false" data-v="join">Join</button>
@@ -179,7 +179,7 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
   </div>
 
   <div class="view on" id="v-deal">
-    <h3>Hollowmere Fleet Software buys Kerbline. The answer in one paragraph</h3>
+    <h3>Hollowmere Fleet Software buys Kerbline</h3>
     <p>Hollowmere bought Kerbline for its 1,900 courier customers and its carrier integrations, not for its platform. The allocation puts the integrations at twice the value of the technology and the brand at under a tenth of the price, and the two job boards now describe one engineering organisation under Hollowmere's Leeds VP. The base rate says the Kerbline platform is absorbed 12 to 24 months after close, with the customer-facing app last <span class="m inf">inferred</span>.</p>
     <h3>The deal, side by side with the acquirer's previous one</h3>
     <div class="scroll"><table>
@@ -200,7 +200,7 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
   </div>
 
   <div class="view" id="v-join">
-    <h3>Platterloop, Head of Engineering. The platform in one paragraph</h3>
+    <h3>Platterloop, Head of Engineering</h3>
     <p>Platterloop sells ordering, kitchen display and payments to about 2,400 restaurants. One Rails monolith on AWS London with a React front end and a React Native app, plus a newer Go payments service. Job ads since January describe a split of the monolith and a move of reporting to BigQuery <span class="m inf">inferred</span>.</p>
     <h3>Ordering chapter</h3>
     <div class="scroll"><table>
@@ -221,7 +221,7 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
   </div>
 
   <div class="view" id="v-invest">
-    <h3>Lanternglass Learning. Is it a three-year hold?</h3>
+    <h3>Lanternglass Learning, a three-year hold?</h3>
     <p>Lanternglass's growth since 2023 is two acquisitions, not its own product. It paid 2.1x revenue for a profitable assessment business and 9x for a loss-making tutoring marketplace, and the job boards show it building on the second and running down the first. The three-year case rests on the tutoring margin the CEO has guided to.</p>
     <div class="scroll"><table>
       <thead><tr><th></th><th>Quizzenby, 2023</th><th>Tuttlewick, 2025</th></tr></thead>
@@ -240,7 +240,7 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
   </div>
 
   <div class="view" id="v-position">
-    <h3>Pedalgrove in e-bike subscriptions. The answer in one paragraph</h3>
+    <h3>Pedalgrove in e-bike subscriptions</h3>
     <p>Pedalgrove is second of four by fleet and first by city coverage, and its moat is the repair network, not the bikes: the only intangible it has ever booked is "service partner agreements" <span class="m ok">cited</span>. The leader is cheaper and bigger but is hiring for a repair network it does not yet have <span class="m ok">cited</span>.</p>
     <div class="scroll"><table>
       <thead><tr><th>Operator</th><th>Fleet <span class="m inf">inferred</span></th><th>Cities</th><th>Per month</th><th>Repair model</th></tr></thead>
@@ -256,7 +256,7 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 
 <section id="install">
   <h2>Install it in your agent</h2>
-  <p class="lead">The skill is one folder in the Agent Skills format. Pick your agent.</p>
+  <p class="lead">Pick your agent. Two minutes, no account.</p>
   <div class="tabs" role="tablist" data-group="i">
     <button role="tab" aria-selected="true" data-v="claude">Claude Code</button>
     <button role="tab" aria-selected="false" data-v="codex">Codex</button>
@@ -303,7 +303,7 @@ cd cold-read
       </div>
     </div>
     <div>
-      <p class="lead">Then ask in your own words.</p>
+      <p class="lead">Then ask the way you would ask a colleague.</p>
       <ul class="ask">
         <li>Cold read Acme Ltd before my interview on Thursday.</li>
         <li>Was Acme bought cheap, and what happens to its engineers?</li>
@@ -315,7 +315,7 @@ cd cold-read
 </section>
 
 <section id="rules">
-  <h2>What the skill will not do</h2>
+  <h2>Six things it will not do</h2>
   <ul class="rules">
     <li><b>Go behind a login.</b><span>Filings, registries, press, job ads, public pages and APIs, DNS, certificate logs, archives. No scraping against terms, no pretexts.</span></li>
     <li><b>State a claim without a mark.</b><span>Cited and linked, inferred from the record, or unknown after looking. Readers tell research from gossip at a glance.</span></li>
@@ -326,7 +326,7 @@ cd cold-read
   </ul>
 </section>
 
-<footer>Cold Read is MIT licensed. The companies on this page are invented. <a href="https://github.com/me2resh/cold-read">Source on GitHub</a>.</footer>
+<footer>Cold Read is MIT licensed. <a href="https://github.com/me2resh/cold-read">Source on GitHub</a>. The companies on this page are samples; the method, the sources and the marks are what you get.</footer>
 </div>
 <script>
 document.querySelectorAll('.tabs').forEach(function(t){var g=t.dataset.group;t.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){

@@ -1,0 +1,8 @@
+---
+description: Cold Read, a method for researching a company from the public record (filings, job boards, app stores, DNS, analysts, comparables) before investing, joining, buying or competing. Apply when the user asks to research, assess or understand a company, a deal, a stack, job ads or the people they will meet.
+alwaysApply: false
+---
+
+Follow `SKILL.md` in this repository (or wherever Cold Read is installed). Read `references/lanes.md` before running the lanes, `references/sources.md` for endpoints and fallbacks, and `references/outputs.md` for the template that matches the lens (invest, join, deal, position).
+
+Rules: public record only. Mark every claim ✅ (cited, linked), 🟡 (inferred or from an unopened snippet) or ❔ (unknown). Never open a LinkedIn profile. Infrastructure findings are context, never talking points. Keep inside knowledge in a separate marked section. Date every board pull and page read. Write the answer first, then evidence, then comparables, then what it means for the reader, then dated signals to watch, then sources by lane.

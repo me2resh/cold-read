@@ -1,6 +1,6 @@
 # Examples
 
-Four worked outputs, one per lens. **Every company, person, number and source in these files is invented** (the names were checked against the web when written and matched no company) to show the shape of the output; nothing here describes a real company. Links are placeholders. The marks (✅ 🟡 ❔) are used exactly as the skill requires, so you can see how a real note reads.
+Four sample reads, one per lens, showing the shape of the output. The companies are samples (each name was checked against the web when written and matched no company) and the figures are illustrative; links are placeholders. The marks (✅ 🟡 ❔) are used exactly as the skill requires, so you can see how a real note reads.
 
 | Lens | File | The one question |
 |---|---|---|

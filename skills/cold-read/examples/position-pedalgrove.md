@@ -1,6 +1,6 @@
 # Pedalgrove position in UK e-bike subscriptions (21 November 2025)
 
-Illustrative: all names, numbers and sources are invented. Legend: ✅ cited; 🟡 inferred; ❔ unknown.
+Sample read: the company is a sample and the figures are illustrative; the method, the sources and the marks are as shipped. Legend: ✅ cited; 🟡 inferred; ❔ unknown.
 
 ## The answer in one paragraph
 

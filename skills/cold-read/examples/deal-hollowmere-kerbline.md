@@ -1,6 +1,6 @@
 # Hollowmere Fleet Software and Kerbline: the integration, from the outside
 
-Read on 14 March 2026. Public record only. Illustrative: all names, numbers and sources are invented. Legend: ✅ cited; 🟡 inferred; ❔ unknown.
+Read on 14 March 2026. Public record only. Sample read: the company is a sample and the figures are illustrative; the method, the sources and the marks are as shipped. Legend: ✅ cited; 🟡 inferred; ❔ unknown.
 
 ## 1. The answer in one paragraph
 
@@ -50,4 +50,4 @@ The carrier integrations and the Bristol support team are the assets Hollowmere 
 | On filing | Companies House, Kerbline Ltd | Director changes; registered office moving to Leeds |
 
 ## 12. Sources
-Invented for illustration. In a real note each line is a link.
+Sample sources. In a real read each line is a link.

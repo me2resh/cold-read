@@ -1,6 +1,6 @@
 # Lanternglass Learning: price against what was bought, and whether it holds (3 February 2026)
 
-Illustrative: all names, numbers and sources are invented. Legend: ✅ cited; 🟡 inferred; ❔ unknown.
+Sample read: the company is a sample and the figures are illustrative; the method, the sources and the marks are as shipped. Legend: ✅ cited; 🟡 inferred; ❔ unknown.
 
 ## The answer in one paragraph
 

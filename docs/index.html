@@ -97,6 +97,27 @@ thead th{border-bottom:1px solid var(--rule-strong)}
 .note{font-size:14px;color:var(--muted);font-family:"Bricolage Grotesque",sans-serif}
 ul.plain{padding-left:20px;margin:0}ul.plain li{margin:4px 0}
 
+
+/* sample reads as paper sheets: always light, like a page on a desk */
+.sheet{--p-ink:#14202c;--p-muted:#5b6977;--p-rule:#d7dde3;--p-rule-strong:#14202c;--p-green:#2e7a4e;--p-amber:#b4761a;--p-grey:#6e7781;
+  background:#fff;color:var(--p-ink);max-width:860px;padding:44px 52px 36px;border-radius:2px;box-shadow:0 1px 0 rgba(0,0,0,.06),0 12px 32px rgba(0,0,0,.18);font-family:"Source Serif 4",Georgia,serif;font-size:15.5px;line-height:1.55}
+.sheet .dochead{display:flex;justify-content:space-between;gap:20px;align-items:baseline;border-bottom:2px solid var(--p-rule-strong);padding-bottom:10px;margin-bottom:6px;font-family:"Bricolage Grotesque",sans-serif}
+.sheet .dochead b{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.sheet .dochead span{color:var(--p-muted);font-size:13.5px;white-space:nowrap}
+.sheet .legend{color:var(--p-muted);font-size:13px;font-family:"Bricolage Grotesque",sans-serif;margin:0 0 6px}
+.sheet h3{margin:20px 0 6px;font-size:16.5px;font-weight:600;color:var(--p-ink)}
+.sheet p{margin:0 0 8px;max-width:none}
+.sheet table{font-size:13.5px;min-width:520px}
+.sheet th,.sheet td{border-bottom:1px solid var(--p-rule);padding:7px 10px 7px 0}
+.sheet th{color:var(--p-muted)}
+.sheet thead th{border-bottom:1px solid var(--p-rule-strong)}
+.sheet .m.ok{color:var(--p-green)}.sheet .m.inf{color:var(--p-amber)}.sheet .m.unk{color:var(--p-grey)}
+.sheet ul.plain{margin:0}
+.sheet .note{color:var(--p-muted)}
+.sheet .docfoot{display:flex;justify-content:space-between;border-top:1px solid var(--p-rule);margin-top:26px;padding-top:10px;color:var(--p-muted);font-size:12.5px;font-family:"Bricolage Grotesque",sans-serif}
+.sheet .docfoot a{color:var(--p-ink)}
+@media (max-width:860px){.sheet{padding:26px 20px 22px}.sheet .dochead{flex-direction:column;gap:2px}.sheet .dochead span{white-space:normal}}
+
 /* install */
 .install{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 pre{background:var(--code);border-radius:6px;padding:14px 16px;overflow:auto;font-size:13.5px;line-height:1.5;margin:0}
@@ -179,7 +200,9 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
   </div>
 
   <div class="view on" id="v-deal">
-    <h3>Hollowmere Fleet Software buys Kerbline</h3>
+    <article class="sheet">
+      <div class="dochead"><b>Hollowmere Fleet Software and Kerbline: the integration, from the outside</b><span>Read on 14 March 2026</span></div>
+      <p class="legend">Marks: cited to a source read that day, inferred from the record, unknown after looking. Sample company.</p>
     <p>Hollowmere bought Kerbline for its 1,900 courier customers and its carrier integrations, not for its platform. The allocation puts the integrations at twice the value of the technology and the brand at under a tenth of the price, and the two job boards now describe one engineering organisation under Hollowmere's Leeds VP. The base rate says the Kerbline platform is absorbed 12 to 24 months after close, with the customer-facing app last <span class="m inf">inferred</span>.</p>
     <h3>The deal, side by side with the acquirer's previous one</h3>
     <div class="scroll"><table>
@@ -197,10 +220,14 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
       <tr><td>June 2026</td><td>Twelve months from close</td><td>First retention cliff; founders' titles on the team page</td></tr>
       <tr><td>On filing</td><td>Registry, Kerbline Ltd</td><td>Director changes; registered office moving to Leeds</td></tr>
     </table></div>
+      <div class="docfoot"><span>Cold Read</span><a href="samples/deal-hollowmere-kerbline.pdf">Open the full read as a PDF</a><span>Page 1</span></div>
+    </article>
   </div>
 
   <div class="view" id="v-join">
-    <h3>Platterloop, Head of Engineering</h3>
+    <article class="sheet">
+      <div class="dochead"><b>Platterloop engineering stack by chapter, for the Head of Engineering role</b><span>Read on 9 May 2026</span></div>
+      <p class="legend">Marks: cited to a source read that day, inferred from the record, unknown after looking. Sample company.</p>
     <p>Platterloop sells ordering, kitchen display and payments to about 2,400 restaurants. One Rails monolith on AWS London with a React front end and a React Native app, plus a newer Go payments service. Job ads since January describe a split of the monolith and a move of reporting to BigQuery <span class="m inf">inferred</span>.</p>
     <h3>Ordering chapter</h3>
     <div class="scroll"><table>
@@ -218,10 +245,14 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
       <li><b>VP Product.</b> Will test whether engineering can give dates; a marketplace background means release trains <span class="m inf">inferred</span></li>
     </ul>
     <p class="note">No LinkedIn profile was opened.</p>
+      <div class="docfoot"><span>Cold Read</span><a href="samples/join-platterloop.pdf">Open the full read as a PDF</a><span>Page 1</span></div>
+    </article>
   </div>
 
   <div class="view" id="v-invest">
-    <h3>Lanternglass Learning, a three-year hold?</h3>
+    <article class="sheet">
+      <div class="dochead"><b>Lanternglass Learning: price against what was bought, and whether it holds</b><span>Read on 3 February 2026</span></div>
+      <p class="legend">Marks: cited to a source read that day, inferred from the record, unknown after looking. Sample company.</p>
     <p>Lanternglass's growth since 2023 is two acquisitions, not its own product. It paid 2.1x revenue for a profitable assessment business and 9x for a loss-making tutoring marketplace, and the job boards show it building on the second and running down the first. The three-year case rests on the tutoring margin the CEO has guided to.</p>
     <div class="scroll"><table>
       <thead><tr><th></th><th>Quizzenby, 2023</th><th>Tuttlewick, 2025</th></tr></thead>
@@ -237,10 +268,14 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
       <tr><td>September 2026</td><td>Half-year results</td><td>Whether "breakeven FY2027" survives</td></tr>
       <tr><td>June 2027</td><td>Tuttlewick earn-out ends</td><td>Founder exits</td></tr>
     </table></div>
+      <div class="docfoot"><span>Cold Read</span><a href="samples/invest-lanternglass.pdf">Open the full read as a PDF</a><span>Page 1</span></div>
+    </article>
   </div>
 
   <div class="view" id="v-position">
-    <h3>Pedalgrove in e-bike subscriptions</h3>
+    <article class="sheet">
+      <div class="dochead"><b>Pedalgrove in e-bike subscriptions: position and what would change it</b><span>Read on 21 November 2025</span></div>
+      <p class="legend">Marks: cited to a source read that day, inferred from the record, unknown after looking. Sample company.</p>
     <p>Pedalgrove is second of four by fleet and first by city coverage, and its moat is the repair network, not the bikes: the only intangible it has ever booked is "service partner agreements" <span class="m ok">cited</span>. The leader is cheaper and bigger but is hiring for a repair network it does not yet have <span class="m ok">cited</span>.</p>
     <div class="scroll"><table>
       <thead><tr><th>Operator</th><th>Fleet <span class="m inf">inferred</span></th><th>Cities</th><th>Per month</th><th>Repair model</th></tr></thead>
@@ -251,6 +286,8 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
     </table></div>
     <h3>Three dated events that would change the ranking</h3>
     <ul class="plain"><li>April 2026: grant scheme renewal terms published.</li><li>January 2026: Velothane's Series C close, if it names a repair acquisition <span class="m inf">inferred</span>.</li><li>On filing: Pedalgrove's accounts for the first full year of the partner network.</li></ul>
+      <div class="docfoot"><span>Cold Read</span><a href="samples/position-pedalgrove.pdf">Open the full read as a PDF</a><span>Page 1</span></div>
+    </article>
   </div>
 </section>
 

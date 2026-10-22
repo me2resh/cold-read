@@ -1,6 +1,6 @@
 # Platterloop engineering stack by chapter (research, 9 May 2026)
 
-Illustrative: all names, numbers and sources are invented. No LinkedIn profile was opened. Legend: ✅ cited; 🟡 inferred; ❔ unknown.
+Sample read: the company is a sample and the figures are illustrative; the method, the sources and the marks are as shipped. No LinkedIn profile was opened. Legend: ✅ cited; 🟡 inferred; ❔ unknown.
 
 ## The platform in one paragraph
 

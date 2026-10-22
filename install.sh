@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Install Cold Read into an agent's skills directory (for agents that do not use Claude Code plugins).
-# Claude Code users: /plugin marketplace add atlas-apex/cold-read, then /plugin install cold-read@cold-read
+# Claude Code users: /plugin marketplace add me2resh/cold-read, then /plugin install cold-read@cold-read
 # Usage: ./install.sh [claude|codex|all|<directory>]
 # Any agent that supports the Agent Skills format (a folder with SKILL.md) can use the same folder:
 # point it at the folder, or copy the folder into that agent's skills directory.

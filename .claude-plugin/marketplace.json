@@ -1,7 +1,7 @@
 {
   "name": "cold-read",
   "description": "Cold Read: company research from the public record, as a plugin.",
-  "owner": { "name": "Ahmed Mohamed", "url": "https://github.com/atlas-apex" },
+  "owner": { "name": "Ahmed Mohamed", "url": "https://github.com/me2resh" },
   "plugins": [
     {
       "name": "cold-read",

@@ -132,7 +132,7 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
   <div>
     <h1>Read any company from the outside.</h1>
     <p class="tag">Before you invest in it, join it or buy it. A skill for AI coding agents that works from the public record alone and marks every claim.</p>
-    <div class="cta"><a class="primary" href="https://github.com/me2resh/cold-read">Get the skill</a><a class="quiet" href="#views">See an example read</a></div>
+    <div class="cta"><a class="primary" href="#install">Install</a><a class="quiet" href="#views">See an example read</a></div>
   </div>
   <div class="ledger" aria-label="Example of a says-versus-does ledger">
     <div class="head"><span>What the company said</span><span>What it did</span><span></span></div>
@@ -171,7 +171,7 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 <section id="views">
   <h2>Example reads</h2>
   <p class="lead">Excerpts from the four worked outputs in the repository. Every company, person, number and source is invented to show the shape of a reading; nothing describes a real company.</p>
-  <div class="tabs" role="tablist">
+  <div class="tabs" role="tablist" data-group="v">
     <button role="tab" aria-selected="true" data-v="deal">Deal</button>
     <button role="tab" aria-selected="false" data-v="join">Join</button>
     <button role="tab" aria-selected="false" data-v="invest">Invest</button>
@@ -256,12 +256,51 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 
 <section id="install">
   <h2>Install it in your agent</h2>
+  <p class="lead">The skill is one folder in the Agent Skills format. Pick your agent.</p>
+  <div class="tabs" role="tablist" data-group="i">
+    <button role="tab" aria-selected="true" data-v="claude">Claude Code</button>
+    <button role="tab" aria-selected="false" data-v="codex">Codex</button>
+    <button role="tab" aria-selected="false" data-v="cursor">Cursor</button>
+    <button role="tab" aria-selected="false" data-v="copilot">GitHub Copilot</button>
+    <button role="tab" aria-selected="false" data-v="other">Other agents</button>
+  </div>
   <div class="install">
     <div>
-      <p class="lead">Claude Code installs it as a plugin in one line. The skill then answers to <code>/cold-read</code>.</p>
+      <div class="view on" id="i-claude">
+        <p>One line, as a plugin. The skill then answers to <code>/cold-read</code>.</p>
 <pre><code>/plugin install cold-read --marketplace me2resh/cold-read</code></pre>
-      <p class="note" style="margin-top:12px">Older versions: <code>/plugin marketplace add me2resh/cold-read</code>, then <code>/plugin install cold-read@cold-read</code>. From a shell: <code>claude plugin install cold-read --marketplace me2resh/cold-read</code>.</p>
-      <p class="note" style="margin-top:12px">Codex and other agents that read the Agent Skills format: clone the repository and run <code>./install.sh codex</code>, or give it your agent's skills directory. Cursor: copy <code>.cursor/rules/cold-read.mdc</code> into your project. Copilot: copy <code>.github/copilot-instructions.md</code>.</p>
+        <p class="note" style="margin-top:12px">Older versions: <code>/plugin marketplace add me2resh/cold-read</code>, then <code>/plugin install cold-read@cold-read</code>. From a shell: <code>claude plugin install cold-read --marketplace me2resh/cold-read</code>. Update later with <code>/plugin update cold-read@cold-read</code>.</p>
+      </div>
+      <div class="view" id="i-codex">
+        <p>Codex reads skills from <code>~/.codex/skills</code>. The installer copies the folder there.</p>
+<pre><code>git clone https://github.com/me2resh/cold-read
+cd cold-read
+./install.sh codex</code></pre>
+        <p class="note" style="margin-top:12px">Inside a project, <code>AGENTS.md</code> in the repository is also written for Codex: copy its text into your project's <code>AGENTS.md</code> and keep <code>skills/cold-read/</code> where Codex can read it.</p>
+      </div>
+      <div class="view" id="i-cursor">
+        <p>Cursor uses project rules. Copy the rule file into your project; it loads the skill when a task matches.</p>
+<pre><code>git clone https://github.com/me2resh/cold-read
+mkdir -p .cursor/rules
+cp cold-read/.cursor/rules/cold-read.mdc .cursor/rules/
+cp -R cold-read/skills/cold-read .cursor/</code></pre>
+        <p class="note" style="margin-top:12px">The rule points at <code>skills/cold-read/SKILL.md</code>; keep the copied folder next to it or adjust the path in the rule.</p>
+      </div>
+      <div class="view" id="i-copilot">
+        <p>Copilot reads repository instructions. Copy the instructions file and the skill folder into your project.</p>
+<pre><code>git clone https://github.com/me2resh/cold-read
+mkdir -p .github
+cp cold-read/.github/copilot-instructions.md .github/
+cp -R cold-read/skills/cold-read .github/</code></pre>
+        <p class="note" style="margin-top:12px">If your project already has <code>copilot-instructions.md</code>, append the text instead of replacing it.</p>
+      </div>
+      <div class="view" id="i-other">
+        <p>Any agent that reads a folder with a <code>SKILL.md</code>, or a plain instructions file, can use it.</p>
+<pre><code>git clone https://github.com/me2resh/cold-read
+cd cold-read
+./install.sh /path/to/your/agent/skills</code></pre>
+        <p class="note" style="margin-top:12px">For agents with a single instructions file, paste <code>AGENTS.md</code> into it and keep <code>skills/cold-read/</code> readable by the agent.</p>
+      </div>
     </div>
     <div>
       <p class="lead">Then ask in your own words.</p>
@@ -290,11 +329,11 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 <footer>Cold Read is MIT licensed. The companies on this page are invented. <a href="https://github.com/me2resh/cold-read">Source on GitHub</a>.</footer>
 </div>
 <script>
-document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
-  document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected','false')});
-  document.querySelectorAll('.view').forEach(function(v){v.classList.remove('on')});
-  b.setAttribute('aria-selected','true');document.getElementById('v-'+b.dataset.v).classList.add('on');
-});});
+document.querySelectorAll('.tabs').forEach(function(t){var g=t.dataset.group;t.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){
+  t.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-selected','false')});
+  document.querySelectorAll('[id^="'+g+'-"].view').forEach(function(v){v.classList.remove('on')});
+  b.setAttribute('aria-selected','true');document.getElementById(g+'-'+b.dataset.v).classList.add('on');
+});});});
 </script>
 </body>
 </html>

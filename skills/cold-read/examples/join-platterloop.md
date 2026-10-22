@@ -1,10 +1,10 @@
-# Tablelight engineering stack by chapter (research, 9 May 2026)
+# Platterloop engineering stack by chapter (research, 9 May 2026)
 
 Illustrative: all names, numbers and sources are invented. No LinkedIn profile was opened. Legend: ✅ cited; 🟡 inferred; ❔ unknown.
 
 ## The platform in one paragraph
 
-Tablelight sells ordering, kitchen display and payments to about 2,400 UK restaurants, 70% on the ordering product alone. The estate is one Rails monolith on AWS London with a React front end and a React Native app, plus a newer Go payments service behind the Adyen integration. Job ads since January describe a split of the monolith into "ordering" and "kitchen" services and a move of reporting from Postgres read replicas to BigQuery 🟡.
+Platterloop sells ordering, kitchen display and payments to about 2,400 UK restaurants, 70% on the ordering product alone. The estate is one Rails monolith on AWS London with a React front end and a React Native app, plus a newer Go payments service behind the Adyen integration. Job ads since January describe a split of the monolith into "ordering" and "kitchen" services and a move of reporting from Postgres read replicas to BigQuery 🟡.
 
 ## 1. Ordering chapter
 

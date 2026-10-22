@@ -4,7 +4,7 @@
 
 Cold Read is a skill for AI coding agents (Claude Code, Codex and anything else that reads the Agent Skills format, with rule files for Cursor and GitHub Copilot). Point it at a company and it reads the public record in six lanes, marks every claim as cited, inferred or unknown, and writes a dated reading in the order a busy reader needs: the answer, the evidence, the comparables, what it means for you, and the signals that would prove it wrong.
 
-Site with example views: see the GitHub Pages link in the repository sidebar.
+Site with example views: https://atlas-apex.github.io/cold-read/
 
 ## Four uses
 
@@ -29,7 +29,7 @@ Plus a **people** lane for the join lens, with no LinkedIn profile ever opened.
 ## Install
 
 ```bash
-git clone https://github.com/<owner>/cold-read
+git clone https://github.com/atlas-apex/cold-read
 cd cold-read
 ./install.sh claude     # ~/.claude/skills/cold-read
 ./install.sh codex      # ~/.codex/skills/cold-read

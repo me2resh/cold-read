@@ -7,7 +7,7 @@
       "name": "cold-read",
       "source": ".",
       "description": "Read any company from the outside before you invest, join or buy it. Six lanes, every claim marked cited, inferred or unknown.",
-      "version": "1.0.3",
+      "version": "1.1.0",
       "category": "research"
     }
   ]

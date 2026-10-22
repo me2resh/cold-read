@@ -37,7 +37,7 @@ Settle four things before searching, in one short exchange or by stating assumpt
 
 ## Step 1: run the lanes
 
-Each lane is a self-contained brief in `references/lanes.md` (read it before spawning). Run them in parallel as separate agents when you have them, otherwise in sequence. Each lane writes its own file with a header (date, sources read, fallbacks tried, legend) and returns a ten-fact summary at the top.
+Each lane is a self-contained brief in `references/lanes.md` (read it before spawning). The lane file layout is fixed too: header, sources table, ten facts, findings, implications, sources. Run them in parallel as separate agents when you have them, otherwise in sequence. Each lane writes its own file with a header (date, sources read, fallbacks tried, legend) and returns a ten-fact summary at the top.
 
 | Lane | Question it answers | Primary sources |
 |---|---|---|
@@ -53,22 +53,18 @@ Lane 7 runs only for the join lens or when a specific person matters to the ques
 
 `references/sources.md` lists the sources by country and type, with the commands and public endpoints that worked (ATS APIs, certificate search, archive lookups, app store search), and the fallbacks when a site blocks fetches.
 
-## Step 2: synthesise
+## Step 2: synthesise, to the fixed layout
 
-Write one note from the lane files. Order matters more than length; a reader with five minutes stops after the first two sections and must still leave with the answer.
+Write one note from the lane files, to the skeleton for the lens in `references/outputs.md`. The layout is fixed on purpose: a reader who has seen one Cold Read can find anything in the next without reading it through, and the checker can prove nothing was dropped. Do not reorder, rename, merge or omit sections; a section with nothing says "Not found after looking at ..." under its heading.
 
-1. **The answer in one paragraph.** State the reading and the confidence.
-2. **The evidence table.** For a deal: the two sides side by side (price and structure, what was bought, purchase price allocation, earn-out status, impairment). For a single company: money, product, customers, leadership, in one table with marks.
-3. **Says versus does.** Quotes with dates on the left, observed actions on the right.
-4. **Timeline so far.** Dated, sourced, one line per event.
-5. **The platform picture.** What runs where, which brands share rails, what a cutover or migration would look like.
-6. **The openings as a plan.** Counts by function, location and seniority; the five ads that matter most; predictions by horizon; ten roles that would tell the most if they appeared next.
-7. **Outside view and base rate.** Analyst split; regulatory climate in one paragraph; comparables table; the general pattern; what a unit inside such a company should expect.
-8. **What it means for the reader.** This is the only section that changes with the lens; see `references/outputs.md`.
-9. **Signals to watch, dated.** A table of date, event, what to look for, source. Earnings calls, registry filings, retention cliffs, regulator registers, board changes.
-10. **Sources by lane.** Footnotes or a numbered list per lane; the note must be reconstructible from them.
+The standard the note has to meet, in brief (the specification has the exact tables and columns):
 
-Keep the shareable copy separate from the working copy if the working copy holds inside facts, personal implications or private references.
+- The header carries the read date, "Public record only. No LinkedIn profile was opened.", the legend, and a true count of footnotes and lanes.
+- Every fact sentence ends with a mark. Every ✅ is followed by an inline link, a footnote of the form `[^s<lane>-<n>]`, or both. A number is never bare. Quotes carry speaker, occasion and date.
+- Sources are footnotes grouped by lane at the end, so the note can be rebuilt from them.
+- A full deal read is long because the record is long: hundreds of lines, one to two hundred footnotes, ten dated timeline rows, five to eight comparables, ten roles to watch for, a dated signals table. Short is right only when the record is thin, and the ❔ lines then say what was looked at.
+
+Before finishing, run `python3 scripts/check_read.py <note.md>` and fix every failure it prints. Keep the shareable copy separate from the working copy if the working copy holds inside facts, personal implications or private references; the shareable copy keeps the "What it means for the reader" heading with the line "Removed from the shareable copy."
 
 ## Lens notes
 

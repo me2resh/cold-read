@@ -40,6 +40,10 @@ Codex and other agents that read the Agent Skills format: clone the repo and run
 
 Then ask: *"Cold read Acme Ltd before my interview on Thursday"* or *"Was Acme bought cheap, and what happens to its engineers?"*
 
+## The output is deterministic
+
+Every read follows a fixed skeleton for its lens (deal, join, invest, position, people): numbered sections in a fixed order, tables with fixed columns, a mark on every claim, footnotes as `[^s<lane>-<n>]` grouped by lane at the end, and a header with a true source count. `skills/cold-read/references/outputs.md` is the specification; `skills/cold-read/scripts/check_read.py` fails a note that drifts from it, and the skill runs it before finishing. The four sample reads in `skills/cold-read/examples/` pass it.
+
 ## Rules the skill enforces
 
 - Public record only. Nothing behind a login, no scraping against terms, no pretexts.
@@ -56,7 +60,9 @@ Then ask: *"Cold read Acme Ltd before my interview on Thursday"* or *"Was Acme b
 .claude-plugin/marketplace.json     this repo is also its own marketplace
 skills/cold-read/SKILL.md           the skill (Agent Skills format)
 skills/cold-read/references/        lanes, sources and endpoints, output templates
-skills/cold-read/examples/          four sample reads with illustrative figures
+skills/cold-read/examples/          four sample reads to the fixed layout, 40 to 70 footnotes each
+skills/cold-read/scripts/check_read.py   layout and citation checker
+docs/build/build_samples.py          renders the samples to docs/samples/*.pdf
 AGENTS.md                           generic agent instructions (Codex and others)
 .cursor/rules/                      Cursor rule
 .github/copilot-instructions.md

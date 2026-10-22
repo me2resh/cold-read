@@ -114,6 +114,8 @@ ul.plain{padding-left:20px;margin:0}ul.plain li{margin:4px 0}
 .sheet .m.ok{color:var(--p-green)}.sheet .m.inf{color:var(--p-amber)}.sheet .m.unk{color:var(--p-grey)}
 .sheet ul.plain{margin:0}
 .sheet .note{color:var(--p-muted)}
+.sheet sup{font-family:"Bricolage Grotesque",sans-serif;font-size:10px;color:var(--p-amber);margin-left:2px}
+.sheet a{color:#0f4c75;text-decoration:none}
 .sheet .docfoot{display:flex;justify-content:space-between;border-top:1px solid var(--p-rule);margin-top:26px;padding-top:10px;color:var(--p-muted);font-size:12.5px;font-family:"Bricolage Grotesque",sans-serif}
 .sheet .docfoot a{color:var(--p-ink)}
 @media (max-width:860px){.sheet{padding:26px 20px 22px}.sheet .dochead{flex-direction:column;gap:2px}.sheet .dochead span{white-space:normal}}
@@ -191,7 +193,7 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 
 <section id="views">
   <h2>What a finished read looks like</h2>
-  <p class="lead">Four sample reads, one for each question. The full versions ship with the skill.</p>
+  <p class="lead">Four sample reads, one for each question, each to the fixed layout the skill enforces: numbered sections, a mark on every claim, sources by lane. The full versions ship with the skill and open as PDFs.</p>
   <div class="tabs" role="tablist" data-group="v">
     <button role="tab" aria-selected="true" data-v="deal">Deal</button>
     <button role="tab" aria-selected="false" data-v="join">Join</button>
@@ -201,33 +203,34 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 
   <div class="view on" id="v-deal">
     <article class="sheet">
-      <div class="dochead"><b>Hollowmere Fleet Software and Kerbline: the integration, from the outside</b><span>Read on 14 March 2026</span></div>
-      <p class="legend">Marks: cited to a source read that day, inferred from the record, unknown after looking. Sample company.</p>
-    <p>Hollowmere bought Kerbline for its 1,900 courier customers and its carrier integrations, not for its platform. The allocation puts the integrations at twice the value of the technology and the brand at under a tenth of the price, and the two job boards now describe one engineering organisation under Hollowmere's Leeds VP. The base rate says the Kerbline platform is absorbed 12 to 24 months after close, with the customer-facing app last <span class="m inf">inferred</span>.</p>
-    <h3>The deal, side by side with the acquirer's previous one</h3>
-    <div class="scroll"><table>
-      <thead><tr><th></th><th>Kerbline, June 2025</th><th>Wayfold, November 2023</th></tr></thead>
-      <tr><td>Accounting price</td><td>GBP 48.0m: 31.0m cash, 17.0m contingent; earn-out up to 25m <span class="m ok">cited</span></td><td>GBP 112.5m, 60% in shares <span class="m ok">cited</span></td></tr>
-      <tr><td>Price per customer</td><td>about GBP 25k</td><td>about GBP 173k</td></tr>
-      <tr><td>Trailing revenue and multiple</td><td>GBP 14.2m, 3.4x <span class="m ok">cited</span></td><td>GBP 21.0m, 5.4x <span class="m ok">cited</span></td></tr>
-      <tr><td>Allocation</td><td>Integrations 12.0m, technology 6.1m, brand 1.9m, goodwill 23.6m <span class="m ok">cited</span></td><td>Technology 31m, brand 9m, goodwill 58m <span class="m ok">cited</span></td></tr>
-      <tr><td>Earn-out status</td><td>"Resolved; fixed amounts payable 2027 and 2028" <span class="m ok">cited</span>. Early fixing usually means a settlement below the maximum <span class="m inf">inferred</span></td><td>Paid in full <span class="m ok">cited</span></td></tr>
-    </table></div>
-    <h3>Signals to watch</h3>
-    <div class="scroll"><table>
-      <thead><tr><th>Date</th><th>Event</th><th>What to look for</th></tr></thead>
-      <tr><td>28 April 2026</td><td>First-quarter trading update</td><td>Kerbline named at all; a rebrand date</td></tr>
-      <tr><td>June 2026</td><td>Twelve months from close</td><td>First retention cliff; founders' titles on the team page</td></tr>
-      <tr><td>On filing</td><td>Registry, Kerbline Ltd</td><td>Director changes; registered office moving to Leeds</td></tr>
-    </table></div>
-      <div class="docfoot"><span>Cold Read</span><a href="samples/deal-hollowmere-kerbline.pdf">Open the full read as a PDF</a><span>Page 1</span></div>
+      <div class="dochead"><b>Hollowmere and Kerbline: the integration, from the outside</b><span>Read on 14 March 2026</span></div>
+      <p class="legend">Public record only. No LinkedIn profile was opened. 41 footnotes across six lanes. Sample company.</p>
+      <h3>1. The answer in one paragraph</h3>
+      <p>Hollowmere bought Kerbline for its 1,900 courier customers and its carrier integrations, not for its platform. The allocation books the integrations at GBP 12.0m, the technology at GBP 6.1m and the brand at GBP 1.9m <span class="m ok">cited</span> (<a href="#">FY2025 annual report, note 14</a>)<sup>s1-4</sup>. Nine months after close, the pricing page redirects to Hollowmere, the privacy notice names Hollowmere as controller, and a Hollowmere ad describes "bringing two engineering organisations together" <span class="m ok">cited</span><sup>s3-3, s3-5, s6-2</sup>. Five comparable deals absorbed the acquired platform within 24 months <span class="m ok">cited</span><sup>s4-6 to s4-10</sup>. The reading is that the Kerbline platform is absorbed between June 2026 and June 2027, with the customer-facing app last <span class="m inf">inferred</span>, because the allocation, the ads and the comparables point the same way.</p>
+      <h3>2. The deals, side by side</h3>
+      <div class="scroll"><table>
+        <thead><tr><th></th><th>Kerbline</th><th>Wayfold</th></tr></thead>
+        <tr><td>Price and structure</td><td>GBP 48.0m: 31.0m cash, 17.0m contingent; earn-out up to 25.0m <span class="m ok">cited</span><sup>s1-4</sup></td><td>GBP 112.5m, 60% in shares <span class="m ok">cited</span><sup>s1-7</sup></td></tr>
+        <tr><td>Purchase price allocation</td><td>Integrations 12.0m, technology 6.1m, brand 1.9m, goodwill 23.6m <span class="m ok">cited</span><sup>s1-4</sup></td><td>Technology 31.0m, brand 9.0m, goodwill 58.0m <span class="m ok">cited</span><sup>s1-8</sup></td></tr>
+        <tr><td>Earn-out status</td><td>"Resolved; fixed amounts of GBP 9.2m and GBP 6.8m payable March 2027 and March 2028" <span class="m ok">cited</span><sup>s1-5</sup>. Fixing eighteen months early at 16.0m against a 25.0m maximum usually means a negotiated settlement <span class="m inf">inferred</span></td><td>Paid in full <span class="m ok">cited</span><sup>s1-4</sup></td></tr>
+      </table></div>
+      <h3>3b. What it does</h3>
+      <div class="scroll"><table>
+        <thead><tr><th>Date</th><th>What happened</th><th>Where it shows</th><th>Mark</th></tr></thead>
+        <tr><td>2025-07-14</td><td>Founders dropped from the Kerbline board; two Hollowmere directors appointed</td><td>Registry filing</td><td><span class="m ok">cited</span><sup>s1-3</sup></td></tr>
+        <tr><td>2026-01-20</td><td>Pricing page redirects to Hollowmere's last-mile page</td><td>Archived copy against live</td><td><span class="m ok">cited</span><sup>s3-3</sup></td></tr>
+        <tr><td>2026-02-25</td><td>Certificate for app.kerbline.co.uk issued under Hollowmere's account</td><td>Certificate log</td><td><span class="m ok">cited</span><sup>s5-3</sup></td></tr>
+      </table></div>
+      <h3>12. Sources by lane (excerpt)</h3>
+      <p class="note">s1-4 Hollowmere FY2025 annual report, note 14 (business combinations). s1-5 H1 2026 interim report, note 9. s3-3 Archived Kerbline pricing page, 19 January 2026. s5-3 Certificate transparency entries for app.kerbline.co.uk, 25 February 2026. s6-2 Engineering Manager, Last Mile, posted 18 February 2026.</p>
+      <div class="docfoot"><span>Cold Read</span><a href="samples/deal-hollowmere-kerbline.pdf">Open the full read as a PDF</a><span>Page 1 of 11</span></div>
     </article>
   </div>
 
   <div class="view" id="v-join">
     <article class="sheet">
       <div class="dochead"><b>Platterloop engineering stack by chapter, for the Head of Engineering role</b><span>Read on 9 May 2026</span></div>
-      <p class="legend">Marks: cited to a source read that day, inferred from the record, unknown after looking. Sample company.</p>
+      <p class="legend">Public record only. No LinkedIn profile was opened. 69 footnotes across seven lanes. Sample company.</p>
     <p>Platterloop sells ordering, kitchen display and payments to about 2,400 restaurants. One Rails monolith on AWS London with a React front end and a React Native app, plus a newer Go payments service. Job ads since January describe a split of the monolith and a move of reporting to BigQuery <span class="m inf">inferred</span>.</p>
     <h3>Ordering chapter</h3>
     <div class="scroll"><table>
@@ -245,14 +248,14 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
       <li><b>VP Product.</b> Will test whether engineering can give dates; a marketplace background means release trains <span class="m inf">inferred</span></li>
     </ul>
     <p class="note">No LinkedIn profile was opened.</p>
-      <div class="docfoot"><span>Cold Read</span><a href="samples/join-platterloop.pdf">Open the full read as a PDF</a><span>Page 1</span></div>
+      <div class="docfoot"><span>Cold Read</span><a href="samples/join-platterloop.pdf">Open the full read as a PDF</a><span>Page 1 of 15</span></div>
     </article>
   </div>
 
   <div class="view" id="v-invest">
     <article class="sheet">
       <div class="dochead"><b>Lanternglass Learning: price against what was bought, and whether it holds</b><span>Read on 3 February 2026</span></div>
-      <p class="legend">Marks: cited to a source read that day, inferred from the record, unknown after looking. Sample company.</p>
+      <p class="legend">Public record only. No LinkedIn profile was opened. 65 footnotes across seven lanes. Sample company.</p>
     <p>Lanternglass's growth since 2023 is two acquisitions, not its own product. It paid 2.1x revenue for a profitable assessment business and 9x for a loss-making tutoring marketplace, and the job boards show it building on the second and running down the first. The three-year case rests on the tutoring margin the CEO has guided to.</p>
     <div class="scroll"><table>
       <thead><tr><th></th><th>Quizzenby, 2023</th><th>Tuttlewick, 2025</th></tr></thead>
@@ -268,14 +271,14 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
       <tr><td>September 2026</td><td>Half-year results</td><td>Whether "breakeven FY2027" survives</td></tr>
       <tr><td>June 2027</td><td>Tuttlewick earn-out ends</td><td>Founder exits</td></tr>
     </table></div>
-      <div class="docfoot"><span>Cold Read</span><a href="samples/invest-lanternglass.pdf">Open the full read as a PDF</a><span>Page 1</span></div>
+      <div class="docfoot"><span>Cold Read</span><a href="samples/invest-lanternglass.pdf">Open the full read as a PDF</a><span>Page 1 of 11</span></div>
     </article>
   </div>
 
   <div class="view" id="v-position">
     <article class="sheet">
       <div class="dochead"><b>Pedalgrove in e-bike subscriptions: position and what would change it</b><span>Read on 21 November 2025</span></div>
-      <p class="legend">Marks: cited to a source read that day, inferred from the record, unknown after looking. Sample company.</p>
+      <p class="legend">Public record only. No LinkedIn profile was opened. 55 footnotes across six lanes. Sample company.</p>
     <p>Pedalgrove is second of four by fleet and first by city coverage, and its moat is the repair network, not the bikes: the only intangible it has ever booked is "service partner agreements" <span class="m ok">cited</span>. The leader is cheaper and bigger but is hiring for a repair network it does not yet have <span class="m ok">cited</span>.</p>
     <div class="scroll"><table>
       <thead><tr><th>Operator</th><th>Fleet <span class="m inf">inferred</span></th><th>Cities</th><th>Per month</th><th>Repair model</th></tr></thead>
@@ -286,7 +289,7 @@ footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
     </table></div>
     <h3>Three dated events that would change the ranking</h3>
     <ul class="plain"><li>April 2026: grant scheme renewal terms published.</li><li>January 2026: Velothane's Series C close, if it names a repair acquisition <span class="m inf">inferred</span>.</li><li>On filing: Pedalgrove's accounts for the first full year of the partner network.</li></ul>
-      <div class="docfoot"><span>Cold Read</span><a href="samples/position-pedalgrove.pdf">Open the full read as a PDF</a><span>Page 1</span></div>
+      <div class="docfoot"><span>Cold Read</span><a href="samples/position-pedalgrove.pdf">Open the full read as a PDF</a><span>Page 1 of 10</span></div>
     </article>
   </div>
 </section>

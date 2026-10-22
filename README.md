@@ -21,7 +21,7 @@ Site with example views: https://me2resh.github.io/cold-read/
 2. **Counterparty or product**: the other company in a deal, or products, pricing and money.
 3. **Says versus does**: investor statements against releases, privacy pages, app stores and migrations.
 4. **Market, analysts, base rate**: the analyst split, the regulators, five to eight comparables.
-5. **Infrastructure fingerprint**: DNS, certificates, headers, archived pages. Passive, read-only, context only.
+5. **Infrastructure fingerprint**: DNS, certificates, headers, archived pages. Passive, read-only, cited with the command.
 6. **Openings as the plan**: the job boards as next year's org chart.
 
 Plus a **people** lane for the join lens, with no LinkedIn profile ever opened.
@@ -45,7 +45,7 @@ Then ask: *"Cold read Acme Ltd before my interview on Thursday"* or *"Was Acme b
 - Public record only. Nothing behind a login, no scraping against terms, no pretexts.
 - Every claim marked ✅ cited, 🟡 inferred, ❔ unknown.
 - No LinkedIn profile views; snippets and public pages only.
-- Infrastructure findings are context, never talking points.
+- Infrastructure findings are cited with the command that produced them, and confirmed from an ad, a page or a filing before being quoted to the company.
 - Inside knowledge stays in a separate, marked section; the shareable copy reconstructs from sources alone.
 - Dates on every board pull and page read.
 

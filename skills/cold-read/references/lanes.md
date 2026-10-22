@@ -43,7 +43,7 @@ Analyst split with names, dates, ratings, targets and the one sentence each gave
 
 Output: analyst table; regulatory paragraph; comparables table; pattern paragraph marked 🟡.
 
-## Lane 5: infrastructure fingerprint (passive, read-only, context only)
+## Lane 5: infrastructure fingerprint (passive, read-only, cited with the command)
 
 Only passive public lookups: DNS records (NS, A, MX, TXT, CNAME for known hosts), certificate transparency search for each domain, HTTP response headers and public HTML of marketing, login, privacy and status pages, archived copies where live pages block fetches, app store metadata via public search APIs. No port scans, no login attempts, no authenticated endpoints, no rate-abusive crawling.
 

@@ -56,7 +56,7 @@ Then ask: *"Cold read Acme Ltd before my interview on Thursday"* or *"Was Acme b
 .claude-plugin/marketplace.json     this repo is also its own marketplace
 skills/cold-read/SKILL.md           the skill (Agent Skills format)
 skills/cold-read/references/        lanes, sources and endpoints, output templates
-skills/cold-read/examples/          four worked outputs with invented data
+skills/cold-read/examples/          four sample reads with illustrative figures
 AGENTS.md                           generic agent instructions (Codex and others)
 .cursor/rules/                      Cursor rule
 .github/copilot-instructions.md

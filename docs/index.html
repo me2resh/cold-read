@@ -4,214 +4,290 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cold Read</title>
-<meta name="description" content="Read any company from the outside before you invest, join or buy it. A skill for AI coding agents.">
+<meta name="description" content="Read any company from the outside before you invest, join or buy it. A skill for AI coding agents that works from the public record and marks every claim.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f6f2;--ink:#1b1f24;--muted:#5b6470;--line:#dcd9d0;--card:#ffffff;--accent:#0f5f8f;--accent-ink:#ffffff;--ok:#1f7a3a;--inf:#a36a00;--unk:#7a7a7a;--code:#eeeae0}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101316;--ink:#e8e6df;--muted:#9aa3ad;--line:#2a3037;--card:#171b20;--accent:#6cb4e4;--accent-ink:#0c1116;--ok:#6fcf8b;--inf:#e0b25a;--unk:#9a9a9a;--code:#1e2329}}
-:root[data-theme="dark"]{--bg:#101316;--ink:#e8e6df;--muted:#9aa3ad;--line:#2a3037;--card:#171b20;--accent:#6cb4e4;--accent-ink:#0c1116;--ok:#6fcf8b;--inf:#e0b25a;--unk:#9a9a9a;--code:#1e2329}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
-.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
-header{padding:56px 0 28px}
-h1{font-size:44px;line-height:1.05;margin:0 0 10px;letter-spacing:-.02em}
-.tag{font-size:21px;color:var(--muted);margin:0 0 22px;max-width:720px}
-.cta a{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;margin:0 8px 8px 0}
-.cta a.alt{background:transparent;color:var(--accent);border:1px solid var(--accent)}
-section{padding:28px 0;border-top:1px solid var(--line)}
-h2{font-size:26px;margin:0 0 6px;letter-spacing:-.01em}
-.lead{color:var(--muted);margin:0 0 18px;max-width:760px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
-.card h3{margin:0 0 6px;font-size:17px}
-.card p{margin:0;color:var(--muted);font-size:15px}
-.n{display:inline-block;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accent-ink);text-align:center;line-height:26px;font-weight:700;font-size:14px;margin-right:8px}
-table{width:100%;border-collapse:collapse;font-size:14.5px;margin:10px 0 0}
-th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
-th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
-.tabs button{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer;font:inherit;font-size:14px}
-.tabs button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+:root{
+  --paper:#e9edf0;--raised:#f6f8fa;--ink:#14202c;--muted:#5b6977;--rule:#c9d1d8;--rule-strong:#14202c;
+  --amber:#b4761a;--amber-ink:#fff;--green:#2e7a4e;--grey:#6e7781;--code:#dfe4e8;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0f161d;--raised:#16202a;--ink:#e6ebf0;--muted:#98a4b0;--rule:#2a3642;--rule-strong:#e6ebf0;
+  --amber:#e0a93a;--amber-ink:#14202c;--green:#6fcf8b;--grey:#9aa3ad;--code:#1b2631;
+}}
+:root[data-theme="dark"]{
+  --paper:#0f161d;--raised:#16202a;--ink:#e6ebf0;--muted:#98a4b0;--rule:#2a3642;--rule-strong:#e6ebf0;
+  --amber:#e0a93a;--amber-ink:#14202c;--green:#6fcf8b;--grey:#9aa3ad;--code:#1b2631;
+}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth}
+body{margin:0;overflow-x:clip;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.6}
+h1,h2,h3,.sans,table,button,.cta,nav,.tag{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1080px;width:100%;margin:0 auto;padding:0 20px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:2px}
+
+nav{display:flex;justify-content:space-between;align-items:baseline;padding:22px 0 0;font-size:15px}
+nav .brand{font-weight:700;font-size:18px;text-decoration:none;letter-spacing:-.01em}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+
+header{padding:64px 0 48px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:start}
+h1{font-size:clamp(40px,8.5vw,84px);overflow-wrap:anywhere;line-height:.95;letter-spacing:-.035em;margin:0 0 20px;font-weight:700;font-variation-settings:"opsz" 96}
+.tag{font-size:19px;line-height:1.4;color:var(--muted);margin:0 0 26px;max-width:30ch}
+.cta a{display:inline-block;padding:12px 18px;border-radius:4px;text-decoration:none;font-weight:600;font-size:16px;margin:0 10px 10px 0;border:1.5px solid var(--rule-strong)}
+.cta a.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.cta a.primary:hover{background:var(--amber);border-color:var(--amber);color:var(--amber-ink)}
+.cta a.quiet:hover{background:var(--raised)}
+
+/* the ledger: the page's one visual event */
+.ledger{border-top:2px solid var(--rule-strong);font-size:15px;line-height:1.4}
+.ledger .head{display:grid;grid-template-columns:1fr 1fr 44px;gap:14px;padding:10px 0 8px;color:var(--muted);font-weight:500;border-bottom:1px solid var(--rule)}
+.ledger .row{display:grid;grid-template-columns:1fr 1fr 44px;gap:14px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:start}
+.ledger .said{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-size:16px}
+.ledger .did{font-size:15px}
+.ledger .when{display:block;color:var(--muted);font-size:13px;margin-top:2px;font-style:normal}
+.mark{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;font-weight:700;font-size:15px;font-family:"Bricolage Grotesque",sans-serif;border:1.5px solid currentColor;justify-self:end}
+.mark.ok{color:var(--green)}.mark.inf{color:var(--amber)}.mark.unk{color:var(--grey)}
+.ledger .cap{padding:10px 0 0;color:var(--muted);font-size:14px;font-family:"Bricolage Grotesque",sans-serif}
+.ledger .cap b{color:var(--ink);font-weight:600}
+@media (prefers-reduced-motion:no-preference){
+  .ledger .row .mark{opacity:0;transform:scale(1.6);animation:stamp .45s cubic-bezier(.2,.9,.3,1.2) forwards}
+  .ledger .row:nth-child(2) .mark{animation-delay:.5s}.ledger .row:nth-child(3) .mark{animation-delay:1s}.ledger .row:nth-child(4) .mark{animation-delay:1.5s}
+  @keyframes stamp{to{opacity:1;transform:scale(1)}}
+}
+
+section{padding:48px 0;border-top:1px solid var(--rule)}
+h2{font-size:30px;letter-spacing:-.02em;margin:0 0 8px;font-weight:600;line-height:1.1}
+.lead{margin:0 0 24px;max-width:62ch;color:var(--muted);font-size:17px}
+p{max-width:66ch}
+
+/* lanes as a ruled list */
+.lanes{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.lanes li{display:grid;grid-template-columns:200px 1fr 1fr;gap:20px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:15.5px}
+.lanes li b{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:16px}
+.lanes li span{color:var(--muted)}
+.lanes li em{font-style:normal}
+
+/* uses */
+.uses{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;border-top:1px solid var(--rule)}
+.uses div{padding:18px 0;border-bottom:1px solid var(--rule)}
+.uses h3{margin:0 0 4px;font-size:20px;font-weight:600}
+.uses p{margin:0;font-size:16px}
+.uses p.q{font-style:italic;color:var(--ink)}
+.uses p.o{color:var(--muted);font-size:15px;margin-top:6px}
+
+/* example views */
+.tabs{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--rule);margin:0 0 18px}
+.tabs button{background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;color:var(--muted);padding:10px 14px 10px 0;margin-right:18px;cursor:pointer;font-size:15px;font-weight:500}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--amber)}
 .view{display:none}.view.on{display:block}
-.view h3{margin:14px 0 2px;font-size:17px}
-.view .para{margin:0 0 6px}
-.note{font-size:13px;color:var(--muted);margin:8px 0 0}
-.ok{color:var(--ok)}.inf{color:var(--inf)}.unk{color:var(--unk)}
-pre{background:var(--code);border:1px solid var(--line);border-radius:10px;padding:12px 14px;overflow:auto;font-size:13.5px}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-ul{padding-left:20px}li{margin:4px 0}
-.twocol{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-@media(max-width:720px){.twocol{grid-template-columns:1fr}h1{font-size:34px}.tag{font-size:18px}}
-footer{padding:28px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+.view h3{margin:22px 0 6px;font-size:18px;font-weight:600}
+.view p{margin:0 0 6px}
+table{width:100%;min-width:560px;border-collapse:collapse;font-size:14.5px;line-height:1.4}
+th,td{text-align:left;vertical-align:top;padding:9px 12px 9px 0;border-bottom:1px solid var(--rule)}
+th{color:var(--muted);font-weight:500}
+thead th{border-bottom:1px solid var(--rule-strong)}
 .scroll{overflow-x:auto}
+.m{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:13px}
+.m.ok{color:var(--green)}.m.inf{color:var(--amber)}.m.unk{color:var(--grey)}
+.note{font-size:14px;color:var(--muted);font-family:"Bricolage Grotesque",sans-serif}
+ul.plain{padding-left:20px;margin:0}ul.plain li{margin:4px 0}
+
+/* install */
+.install{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+pre{background:var(--code);border-radius:6px;padding:14px 16px;overflow:auto;font-size:13.5px;line-height:1.5;margin:0}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.ask{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule)}
+.ask li{padding:10px 0;border-bottom:1px solid var(--rule);font-style:italic}
+
+/* rules */
+.rules{columns:2;column-gap:40px;margin:0;padding:0;list-style:none}
+.rules li{break-inside:avoid;padding:0 0 16px}
+.rules b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:17px;margin-bottom:2px}
+.rules span{color:var(--muted);font-size:15.5px}
+
+footer{padding:36px 0 56px;color:var(--muted);font-size:14px;border-top:1px solid var(--rule);font-family:"Bricolage Grotesque",sans-serif}
+
+@media (max-width:860px){
+  header{grid-template-columns:1fr;gap:28px;padding:40px 0 36px}
+  .lanes li{grid-template-columns:1fr;gap:4px;padding:12px 0}
+  .uses,.install{grid-template-columns:1fr;gap:0}
+  .rules{columns:1}
+  nav ul{display:none}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
+<nav aria-label="Page">
+  <a class="brand" href="#">Cold Read</a>
+  <ul><li><a href="#how">How it works</a></li><li><a href="#uses">Uses</a></li><li><a href="#views">Example reads</a></li><li><a href="#install">Install</a></li><li><a href="https://github.com/atlas-apex/cold-read">GitHub</a></li></ul>
+</nav>
+
 <header>
-  <h1>Cold Read</h1>
-  <p class="tag">Read any company from the outside before you invest, join or buy it. A skill for AI coding agents that works from the public record alone and marks every claim.</p>
-  <div class="cta">
-    <a href="https://github.com/atlas-apex/cold-read">Get the skill on GitHub</a>
-    <a class="alt" href="#views">See example views</a>
+  <div>
+    <h1>Read any company from the outside.</h1>
+    <p class="tag">Before you invest in it, join it or buy it. A skill for AI coding agents that works from the public record alone and marks every claim.</p>
+    <div class="cta"><a class="primary" href="https://github.com/atlas-apex/cold-read">Get the skill</a><a class="quiet" href="#views">See an example read</a></div>
+  </div>
+  <div class="ledger" aria-label="Example of a says-versus-does ledger">
+    <div class="head"><span>What the company said</span><span>What it did</span><span></span></div>
+    <div class="row"><div class="said">"Parcelwise will keep its brand and roadmap."<span class="when">CEO, deal call, June 2025</span></div><div class="did">Pricing page redirects to the acquirer's site.<span class="when">Archived copy, January 2026</span></div><span class="mark ok" title="Cited">✓</span></div>
+    <div class="row"><div class="said">"Two great engineering teams."<span class="when">CTO interview, September 2025</span></div><div class="did">Ad: "bringing two engineering organisations together."<span class="when">Job board, February 2026</span></div><span class="mark ok" title="Cited">✓</span></div>
+    <div class="row"><div class="said">"No change for customers."<span class="when">Customer email, June 2025</span></div><div class="did">Privacy page now names the acquirer as controller; migration likely within a year.<span class="when">Inferred from three signals</span></div><span class="mark inf" title="Inferred">~</span></div>
+    <div class="row"><div class="said">"Breakeven next year."<span class="when">CFO, results call</span></div><div class="did">No segment margin disclosed yet.<span class="when">Nothing to check until March</span></div><span class="mark unk" title="Unknown">?</span></div>
+    <div class="cap"><b>✓ cited</b> to a source read today. <b>~ inferred</b> from the record. <b>? unknown</b> after looking. Every claim carries one. The company is invented.</div>
   </div>
 </header>
 
 <section id="how">
-  <h2>How it works</h2>
-  <p class="lead">A company cannot hide its plan. It is in what it files, what it hires for, what it ships, what it tells investors, and what happened to companies like it. Cold Read reads six lanes, in parallel when the agent has sub-agents, and writes one note in the order a busy reader needs.</p>
-  <div class="grid">
-    <div class="card"><h3><span class="n">1</span>Corporate record</h3><p>Filings, registries, deals and their structure, purchase price allocation, directors, cash and debt.</p></div>
-    <div class="card"><h3><span class="n">2</span>Counterparty or product</h3><p>The other side of a deal in the same depth, or products, pricing, customers and money.</p></div>
-    <div class="card"><h3><span class="n">3</span>Says versus does</h3><p>Dated investor statements against releases, privacy pages, app stores and migrations.</p></div>
-    <div class="card"><h3><span class="n">4</span>Market and base rate</h3><p>The analyst split, the regulators, and five to eight comparables with what happened and when.</p></div>
-    <div class="card"><h3><span class="n">5</span>Infrastructure fingerprint</h3><p>DNS, certificate logs, headers, archived pages. Passive and read-only. Context, never talking points.</p></div>
-    <div class="card"><h3><span class="n">6</span>Openings as the plan</h3><p>The job boards as next year's org chart, pulled from the applicant-tracking APIs, not the careers page.</p></div>
-  </div>
-  <p class="note">Plus a people lane for interviews, with no LinkedIn profile ever opened. Every claim is marked <span class="ok">✅ cited</span>, <span class="inf">🟡 inferred</span> or <span class="unk">❔ unknown</span>.</p>
+  <h2>A company cannot hide its plan</h2>
+  <p class="lead">It is in what it files, what it hires for, what it ships, what it tells investors, and what happened to companies like it. Cold Read reads six lanes, in parallel when the agent has sub-agents, and writes one note in the order a busy reader needs: the answer, the evidence, the comparables, what it means for you, and the dated signals that would prove it wrong.</p>
+  <ul class="lanes">
+    <li><b>Corporate record</b><em>Who owns it, what it bought or sold and for how much, who runs it, how much cash and debt.</em><span>Securities filings, company registries, deal releases, director changes.</span></li>
+    <li><b>Counterparty or product</b><em>The other side of a deal in the same depth, or products, pricing, customers and money.</em><span>Filings for the other party, pricing pages, app stores, customer counts.</span></li>
+    <li><b>Says versus does</b><em>What leadership tells investors against what the releases, privacy pages and migrations show.</em><span>Earnings calls, shareholder letters, privacy and terms pages, archived pages, app listings.</span></li>
+    <li><b>Market and base rate</b><em>How outsiders rate it, the regulatory climate, and what happened in five to eight comparable situations.</em><span>Analyst notes, trade press, regulator enforcement, named comparables.</span></li>
+    <li><b>Infrastructure fingerprint</b><em>Which platform serves which brand and how the estates are joined. Passive and read-only. Context, never talking points.</em><span>DNS, certificate transparency, response headers, archived pages, app metadata.</span></li>
+    <li><b>Openings as the plan</b><em>What the company is building, where, at what seniority, and what it has stopped hiring for.</em><span>Applicant-tracking APIs rather than the careers page; aggregator snippets for closed ads.</span></li>
+    <li><b>People</b><em>Who you will meet, what they have said and written, and a one-line read of what each will test. Runs for interviews only.</em><span>Team pages, talks, podcasts, books, blogs, repositories, filings. No LinkedIn profile is ever opened.</span></li>
+  </ul>
 </section>
 
 <section id="uses">
-  <h2>Four uses</h2>
-  <div class="grid">
-    <div class="card"><h3>Invest</h3><p>What did they pay for, and is it worth it? Price against what was bought, the earn-out as a signal, the dated calls that settle it.</p></div>
-    <div class="card"><h3>Join</h3><p>What would I inherit, and who will I meet? Stack by chapter, the mandate, questions by round, one-line reads of each person.</p></div>
-    <div class="card"><h3>Deal</h3><p>What happens to the acquired company, and was it cheap? Two deals side by side, the base rate, the cutover window, the surviving roles.</p></div>
-    <div class="card"><h3>Position</h3><p>Who wins the market, and what would change it? The moat as the filings show it, the regulator as the real constraint, three dated events.</p></div>
+  <h2>Four questions it answers</h2>
+  <div class="uses">
+    <div><h3>Invest</h3><p class="q">What did they pay for, and is it worth it?</p><p class="o">Price against what was bought, the earn-out as a signal, the dated calls that settle it.</p></div>
+    <div><h3>Join</h3><p class="q">What would I inherit, and who will I meet?</p><p class="o">Stack by chapter, the mandate, questions by round, one-line reads of each person.</p></div>
+    <div><h3>Deal</h3><p class="q">What happens to the acquired company, and was it cheap?</p><p class="o">Two deals side by side, the base rate, the cutover window, the surviving roles.</p></div>
+    <div><h3>Position</h3><p class="q">Who wins the market, and what would change it?</p><p class="o">The moat as the filings show it, the regulator as the real constraint, three dated events.</p></div>
   </div>
 </section>
 
 <section id="views">
-  <h2>Example views</h2>
-  <p class="lead">Excerpts from the four example outputs in the repository. Every company, person, number and source below is invented to show the shape; nothing describes a real company.</p>
+  <h2>Example reads</h2>
+  <p class="lead">Excerpts from the four worked outputs in the repository. Every company, person, number and source is invented to show the shape of a reading; nothing describes a real company.</p>
   <div class="tabs" role="tablist">
-    <button role="tab" aria-selected="true" data-v="deal">Deal: Meridian buys Parcelwise</button>
-    <button role="tab" aria-selected="false" data-v="join">Join: Tablelight, Head of Engineering</button>
-    <button role="tab" aria-selected="false" data-v="invest">Invest: Lumenary Learning</button>
-    <button role="tab" aria-selected="false" data-v="position">Position: Pedalpost</button>
+    <button role="tab" aria-selected="true" data-v="deal">Deal</button>
+    <button role="tab" aria-selected="false" data-v="join">Join</button>
+    <button role="tab" aria-selected="false" data-v="invest">Invest</button>
+    <button role="tab" aria-selected="false" data-v="position">Position</button>
   </div>
 
   <div class="view on" id="v-deal">
-    <h3>The answer in one paragraph</h3>
-    <p class="para">Meridian bought Parcelwise for its 1,900 courier customers and its carrier integrations, not for its platform. The allocation puts the integrations at twice the value of the technology and the brand at under a tenth of the price, and the two job boards now describe one engineering organisation under Meridian's Leeds VP. The base rate says the Parcelwise platform is absorbed 12 to 24 months after close, with the customer-facing app last <span class="inf">🟡</span>.</p>
+    <h3>Meridian Fleet Software buys Parcelwise. The answer in one paragraph</h3>
+    <p>Meridian bought Parcelwise for its 1,900 courier customers and its carrier integrations, not for its platform. The allocation puts the integrations at twice the value of the technology and the brand at under a tenth of the price, and the two job boards now describe one engineering organisation under Meridian's Leeds VP. The base rate says the Parcelwise platform is absorbed 12 to 24 months after close, with the customer-facing app last <span class="m inf">inferred</span>.</p>
     <h3>The deal, side by side with the acquirer's previous one</h3>
     <div class="scroll"><table>
-      <tr><th></th><th>Parcelwise (Jun 2025)</th><th>Routewell (Nov 2023)</th></tr>
-      <tr><td>Accounting price</td><td>GBP 48.0m: 31.0m cash, 17.0m contingent; earn-out up to 25m <span class="ok">✅</span></td><td>GBP 112.5m, 60% shares <span class="ok">✅</span></td></tr>
+      <thead><tr><th></th><th>Parcelwise, June 2025</th><th>Routewell, November 2023</th></tr></thead>
+      <tr><td>Accounting price</td><td>GBP 48.0m: 31.0m cash, 17.0m contingent; earn-out up to 25m <span class="m ok">cited</span></td><td>GBP 112.5m, 60% in shares <span class="m ok">cited</span></td></tr>
       <tr><td>Price per customer</td><td>about GBP 25k</td><td>about GBP 173k</td></tr>
-      <tr><td>Trailing revenue, multiple</td><td>GBP 14.2m, 3.4x <span class="ok">✅</span></td><td>GBP 21.0m, 5.4x <span class="ok">✅</span></td></tr>
-      <tr><td>Allocation</td><td>Integrations 12.0m, technology 6.1m, brand 1.9m, goodwill 23.6m <span class="ok">✅</span></td><td>Technology 31m, brand 9m, goodwill 58m <span class="ok">✅</span></td></tr>
-      <tr><td>Earn-out status</td><td>"Resolved; fixed amounts payable 2027 and 2028" <span class="ok">✅</span>. Early fixing usually means a settlement below the maximum <span class="inf">🟡</span></td><td>Paid in full <span class="ok">✅</span></td></tr>
+      <tr><td>Trailing revenue and multiple</td><td>GBP 14.2m, 3.4x <span class="m ok">cited</span></td><td>GBP 21.0m, 5.4x <span class="m ok">cited</span></td></tr>
+      <tr><td>Allocation</td><td>Integrations 12.0m, technology 6.1m, brand 1.9m, goodwill 23.6m <span class="m ok">cited</span></td><td>Technology 31m, brand 9m, goodwill 58m <span class="m ok">cited</span></td></tr>
+      <tr><td>Earn-out status</td><td>"Resolved; fixed amounts payable 2027 and 2028" <span class="m ok">cited</span>. Early fixing usually means a settlement below the maximum <span class="m inf">inferred</span></td><td>Paid in full <span class="m ok">cited</span></td></tr>
     </table></div>
-    <h3>What it says and what it does</h3>
+    <h3>Signals to watch</h3>
     <div class="scroll"><table>
-      <tr><th>Said (dated)</th><th>Done (dated)</th></tr>
-      <tr><td>"Parcelwise will keep its brand and roadmap" (CEO, 3 Jun 2025) <span class="ok">✅</span></td><td>Pricing page redirects to meridian.com/last-mile since 20 Jan 2026 <span class="ok">✅</span></td></tr>
-      <tr><td>"Two great engineering teams" (CTO, Sep 2025) <span class="ok">✅</span></td><td>Ad: "bringing two engineering organisations together" (18 Feb 2026) <span class="ok">✅</span></td></tr>
-    </table></div>
-    <h3>Signals to watch, dated</h3>
-    <div class="scroll"><table>
-      <tr><th>Date</th><th>Event</th><th>What to look for</th></tr>
-      <tr><td>2026-04-28</td><td>Q1 trading update</td><td>Parcelwise named at all; a rebrand date</td></tr>
-      <tr><td>2026-06</td><td>12 months from close</td><td>First retention cliff; founders' titles on the team page</td></tr>
+      <thead><tr><th>Date</th><th>Event</th><th>What to look for</th></tr></thead>
+      <tr><td>28 April 2026</td><td>First-quarter trading update</td><td>Parcelwise named at all; a rebrand date</td></tr>
+      <tr><td>June 2026</td><td>Twelve months from close</td><td>First retention cliff; founders' titles on the team page</td></tr>
       <tr><td>On filing</td><td>Registry, Parcelwise Ltd</td><td>Director changes; registered office moving to Leeds</td></tr>
     </table></div>
   </div>
 
   <div class="view" id="v-join">
-    <h3>The platform in one paragraph</h3>
-    <p class="para">Tablelight sells ordering, kitchen display and payments to about 2,400 restaurants. One Rails monolith on AWS London with a React front end and a React Native app, plus a newer Go payments service. Job ads since January describe a split of the monolith and a move of reporting to BigQuery <span class="inf">🟡</span>.</p>
+    <h3>Tablelight, Head of Engineering. The platform in one paragraph</h3>
+    <p>Tablelight sells ordering, kitchen display and payments to about 2,400 restaurants. One Rails monolith on AWS London with a React front end and a React Native app, plus a newer Go payments service. Job ads since January describe a split of the monolith and a move of reporting to BigQuery <span class="m inf">inferred</span>.</p>
     <h3>Ordering chapter</h3>
     <div class="scroll"><table>
-      <tr><th>Component</th><th>Runs on today</th><th>Confidence</th><th>Heading</th></tr>
-      <tr><td>Menu and order API</td><td>Rails, Postgres, Sidekiq (three ads)</td><td><span class="ok">✅</span></td><td>Extraction to a service; "Go or Kotlin" in two ads <span class="inf">🟡</span></td></tr>
-      <tr><td>Guest web ordering</td><td>Next.js on Vercel (headers, ad)</td><td><span class="ok">✅</span></td><td>Unchanged</td></tr>
-      <tr><td>Staff mobile app</td><td>React Native; last update 2 Apr 2026 (App Store)</td><td><span class="ok">✅</span></td><td>Monthly releases</td></tr>
+      <thead><tr><th>Component</th><th>Runs on today</th><th>Confidence</th><th>Where it is heading</th></tr></thead>
+      <tr><td>Menu and order API</td><td>Rails, Postgres, Sidekiq, from three ads</td><td><span class="m ok">cited</span></td><td>Extraction to a service; "Go or Kotlin" in two ads <span class="m inf">inferred</span></td></tr>
+      <tr><td>Guest web ordering</td><td>Next.js on Vercel, from headers and an ad</td><td><span class="m ok">cited</span></td><td>Unchanged</td></tr>
+      <tr><td>Staff mobile app</td><td>React Native; last update 2 April 2026, App Store</td><td><span class="m ok">cited</span></td><td>Monthly releases</td></tr>
     </table></div>
     <h3>What it means for the mandate</h3>
-    <p class="para">Inherits a monolith split that two ads say has started and none says has finished; a payments service that is the revenue bet; a platform team of two with no SRE practice; and a founder CTO moving sideways, which makes the first ninety days about trust with the people who built it. Fourteen open roles make it a hiring role first <span class="inf">🟡</span>.</p>
-    <h3>People, one-line reads</h3>
-    <ul>
-      <li><strong>CEO:</strong> will test whether you can talk to restaurant owners, not just engineers <span class="inf">🟡</span> (two podcast episodes on operator pain)</li>
-      <li><strong>CTO:</strong> will test whether you respect what was built; the 2024 post on "boring technology" is the tell <span class="ok">✅</span></li>
-      <li><strong>VP Product:</strong> will test whether engineering can give dates; marketplace background means release trains <span class="inf">🟡</span></li>
+    <p>Inherits a monolith split that two ads say has started and none says has finished; a payments service that is the revenue bet; a platform team of two with no SRE practice; and a founder CTO moving sideways, which makes the first ninety days about trust with the people who built it. Fourteen open roles make it a hiring role first <span class="m inf">inferred</span>.</p>
+    <h3>People, one line each</h3>
+    <ul class="plain">
+      <li><b>CEO.</b> Will test whether you can talk to restaurant owners, not just engineers. Two podcast episodes on operator pain <span class="m inf">inferred</span></li>
+      <li><b>CTO.</b> Will test whether you respect what was built; the 2024 post on "boring technology" is the tell <span class="m ok">cited</span></li>
+      <li><b>VP Product.</b> Will test whether engineering can give dates; a marketplace background means release trains <span class="m inf">inferred</span></li>
     </ul>
     <p class="note">No LinkedIn profile was opened.</p>
   </div>
 
   <div class="view" id="v-invest">
-    <h3>The answer in one paragraph</h3>
-    <p class="para">Lumenary's growth since 2023 is two acquisitions, not its own product. It paid 2.1x revenue for a profitable assessment business and 9x for a loss-making tutoring marketplace, and the job boards show it building on the second and running down the first. The three-year case rests on the tutoring margin the CEO has guided to.</p>
+    <h3>Lumenary Learning. Is it a three-year hold?</h3>
+    <p>Lumenary's growth since 2023 is two acquisitions, not its own product. It paid 2.1x revenue for a profitable assessment business and 9x for a loss-making tutoring marketplace, and the job boards show it building on the second and running down the first. The three-year case rests on the tutoring margin the CEO has guided to.</p>
     <div class="scroll"><table>
-      <tr><th></th><th>Gradebook (2023)</th><th>Tutorly (2025)</th></tr>
-      <tr><td>Price and structure</td><td>GBP 19m cash <span class="ok">✅</span></td><td>GBP 135m, 40% shares, earn-out to 2027 <span class="ok">✅</span></td></tr>
-      <tr><td>Multiple, profitability</td><td>2.1x, profitable <span class="ok">✅</span></td><td>9x, loss-making, "breakeven FY2027" <span class="ok">✅</span></td></tr>
-      <tr><td>Goodwill share</td><td>48%</td><td>81%</td></tr>
-      <tr><td>What was done with it</td><td>Brand retired Mar 2025 <span class="ok">✅</span></td><td>Brand kept; 11 of 23 engineering roles <span class="ok">✅</span></td></tr>
+      <thead><tr><th></th><th>Gradebook, 2023</th><th>Tutorly, 2025</th></tr></thead>
+      <tr><td>Price and structure</td><td>GBP 19m cash <span class="m ok">cited</span></td><td>GBP 135m, 40% in shares, earn-out to 2027 <span class="m ok">cited</span></td></tr>
+      <tr><td>Multiple and profitability</td><td>2.1x, profitable <span class="m ok">cited</span></td><td>9x, loss-making, "breakeven FY2027" <span class="m ok">cited</span></td></tr>
+      <tr><td>Goodwill share of price</td><td>48%</td><td>81%</td></tr>
+      <tr><td>What was done with it</td><td>Brand retired March 2025 <span class="m ok">cited</span></td><td>Brand kept; 11 of 23 engineering roles <span class="m ok">cited</span></td></tr>
     </table></div>
-    <h3>Signals to watch, dated</h3>
+    <h3>Signals to watch</h3>
     <div class="scroll"><table>
-      <tr><th>Date</th><th>Event</th><th>What to look for</th></tr>
-      <tr><td>2026-03-12</td><td>FY2025 results</td><td>Tutorly segment margin, first disclosure</td></tr>
-      <tr><td>2026-09</td><td>H1 2026 results</td><td>Whether "breakeven FY2027" survives</td></tr>
-      <tr><td>2027-06</td><td>Tutorly earn-out end</td><td>Founder exits</td></tr>
+      <thead><tr><th>Date</th><th>Event</th><th>What to look for</th></tr></thead>
+      <tr><td>12 March 2026</td><td>Full-year results</td><td>Tutorly segment margin, first disclosure</td></tr>
+      <tr><td>September 2026</td><td>Half-year results</td><td>Whether "breakeven FY2027" survives</td></tr>
+      <tr><td>June 2027</td><td>Tutorly earn-out ends</td><td>Founder exits</td></tr>
     </table></div>
   </div>
 
   <div class="view" id="v-position">
-    <h3>The answer in one paragraph</h3>
-    <p class="para">Pedalpost is second of four by fleet and first by city coverage, and its moat is the repair network, not the bikes: the only intangible it has ever booked is "service partner agreements" <span class="ok">✅</span>. The leader is cheaper and bigger but is hiring for a repair network it does not yet have <span class="ok">✅</span>.</p>
+    <h3>Pedalpost in e-bike subscriptions. The answer in one paragraph</h3>
+    <p>Pedalpost is second of four by fleet and first by city coverage, and its moat is the repair network, not the bikes: the only intangible it has ever booked is "service partner agreements" <span class="m ok">cited</span>. The leader is cheaper and bigger but is hiring for a repair network it does not yet have <span class="m ok">cited</span>.</p>
     <div class="scroll"><table>
-      <tr><th>Operator</th><th>Fleet <span class="inf">🟡</span></th><th>Cities</th><th>Per month</th><th>Repair model</th></tr>
-      <tr><td>Velomo</td><td>~18,000</td><td>6</td><td>GBP 59</td><td>Contracted, building in-house (12 of 30 open roles) <span class="ok">✅</span></td></tr>
-      <tr><td>Pedalpost</td><td>~11,000</td><td>14</td><td>GBP 69</td><td>Partner network, 120 shops <span class="ok">✅</span></td></tr>
-      <tr><td>Spoke &amp; Co</td><td>~4,000</td><td>3</td><td>GBP 79</td><td>In-house <span class="ok">✅</span></td></tr>
-      <tr><td>CityWheel</td><td>~2,500</td><td>2</td><td>GBP 49</td><td>None stated <span class="unk">❔</span></td></tr>
+      <thead><tr><th>Operator</th><th>Fleet <span class="m inf">inferred</span></th><th>Cities</th><th>Per month</th><th>Repair model</th></tr></thead>
+      <tr><td>Velomo</td><td>about 18,000</td><td>6</td><td>GBP 59</td><td>Contracted, building in-house; 12 of 30 open roles <span class="m ok">cited</span></td></tr>
+      <tr><td>Pedalpost</td><td>about 11,000</td><td>14</td><td>GBP 69</td><td>Partner network, 120 shops <span class="m ok">cited</span></td></tr>
+      <tr><td>Spoke &amp; Co</td><td>about 4,000</td><td>3</td><td>GBP 79</td><td>In-house <span class="m ok">cited</span></td></tr>
+      <tr><td>CityWheel</td><td>about 2,500</td><td>2</td><td>GBP 49</td><td>None stated <span class="m unk">unknown</span></td></tr>
     </table></div>
-    <h3>Says versus does</h3>
-    <p class="para">Velomo's CEO: "repair is a commodity" (podcast, Jun 2025) <span class="ok">✅</span>. Velomo's board: twelve repair-technician roles and two repair-operations leads since September <span class="ok">✅</span>.</p>
     <h3>Three dated events that would change the ranking</h3>
-    <ul><li>2026-04: grant scheme renewal terms published.</li><li>2026-01: Velomo's Series C close, if it names a repair acquisition <span class="inf">🟡</span>.</li><li>On filing: Pedalpost FY2025 accounts, the first full year of the partner network.</li></ul>
+    <ul class="plain"><li>April 2026: grant scheme renewal terms published.</li><li>January 2026: Velomo's Series C close, if it names a repair acquisition <span class="m inf">inferred</span>.</li><li>On filing: Pedalpost's accounts for the first full year of the partner network.</li></ul>
   </div>
 </section>
 
 <section id="install">
-  <h2>Install</h2>
-  <div class="twocol">
+  <h2>Install it in your agent</h2>
+  <div class="install">
     <div>
-      <p class="lead">The skill is a folder with a <code>SKILL.md</code>, the Agent Skills format that Claude Code, Codex and other agents read. Rule files are included for Cursor and GitHub Copilot.</p>
-<pre><code>git clone https://github.com/atlas-apex/cold-read
-cd cold-read
-./install.sh claude     # ~/.claude/skills/cold-read
-./install.sh codex      # ~/.codex/skills/cold-read
-./install.sh all
-./install.sh /path/to/your/agent/skills</code></pre>
+      <p class="lead">Claude Code installs it as a plugin in one line. The skill then answers to <code>/cold-read</code>.</p>
+<pre><code>/plugin install cold-read --marketplace atlas-apex/cold-read</code></pre>
+      <p class="note" style="margin-top:12px">Older versions: <code>/plugin marketplace add atlas-apex/cold-read</code>, then <code>/plugin install cold-read@cold-read</code>. From a shell: <code>claude plugin install cold-read --marketplace atlas-apex/cold-read</code>.</p>
+      <p class="note" style="margin-top:12px">Codex and other agents that read the Agent Skills format: clone the repository and run <code>./install.sh codex</code>, or give it your agent's skills directory. Cursor: copy <code>.cursor/rules/cold-read.mdc</code> into your project. Copilot: copy <code>.github/copilot-instructions.md</code>.</p>
     </div>
     <div>
-      <p class="lead">Then ask your agent, in your own words:</p>
-      <ul>
-        <li>"Cold read Acme Ltd before my interview on Thursday."</li>
-        <li>"Was Acme bought cheap, and what happens to its engineers?"</li>
-        <li>"Read Acme's job ads: what are they building next year?"</li>
-        <li>"Is Acme a three-year hold? Outside view only."</li>
+      <p class="lead">Then ask in your own words.</p>
+      <ul class="ask">
+        <li>Cold read Acme Ltd before my interview on Thursday.</li>
+        <li>Was Acme bought cheap, and what happens to its engineers?</li>
+        <li>Read Acme's job ads. What are they building next year?</li>
+        <li>Is Acme a three-year hold? Outside view only.</li>
       </ul>
-      <p class="note">Cursor: copy <code>.cursor/rules/cold-read.mdc</code> into your project. Copilot: copy <code>.github/copilot-instructions.md</code>. Other agents: add <code>AGENTS.md</code> to their instructions.</p>
     </div>
   </div>
 </section>
 
 <section id="rules">
-  <h2>Rules the skill enforces</h2>
-  <div class="grid">
-    <div class="card"><h3>Public record only</h3><p>Filings, registries, press, job ads, public pages and APIs, DNS, certificate logs, archives. Nothing behind a login, no pretexts.</p></div>
-    <div class="card"><h3>Every claim marked</h3><p>✅ cited and linked, 🟡 inferred or from an unopened snippet, ❔ unknown after looking. Readers can tell research from gossip at a glance.</p></div>
-    <div class="card"><h3>No profile views</h3><p>LinkedIn profile visits tell the person they are being researched. Snippets, team pages, talks and filings instead.</p></div>
-    <div class="card"><h3>Context, not talking points</h3><p>Infrastructure findings shape the view and are never quoted to the company. Confirm from ads, press or filings before citing.</p></div>
-    <div class="card"><h3>Inside knowledge stays separate</h3><p>If you work there, your facts sit in a marked section. The shareable copy reconstructs from the sources alone.</p></div>
-    <div class="card"><h3>Dates on everything</h3><p>When each board was pulled and each page read. A reading is only as good as its date.</p></div>
-  </div>
+  <h2>What the skill will not do</h2>
+  <ul class="rules">
+    <li><b>Go behind a login.</b><span>Filings, registries, press, job ads, public pages and APIs, DNS, certificate logs, archives. No scraping against terms, no pretexts.</span></li>
+    <li><b>State a claim without a mark.</b><span>Cited and linked, inferred from the record, or unknown after looking. Readers tell research from gossip at a glance.</span></li>
+    <li><b>Open a LinkedIn profile.</b><span>A profile visit tells the person they are being researched. Snippets, team pages, talks and filings instead.</span></li>
+    <li><b>Quote infrastructure to the company.</b><span>DNS and certificate findings shape the view and stay out of the conversation. Confirm from ads, press or filings before citing.</span></li>
+    <li><b>Mix inside knowledge with the record.</b><span>If you work there, your facts sit in a marked section. The shareable copy reconstructs from the sources alone.</span></li>
+    <li><b>Leave a reading undated.</b><span>When each board was pulled and each page read. A reading is only as good as its date.</span></li>
+  </ul>
 </section>
 
-<footer>Cold Read is MIT licensed. The example companies on this page are invented.</footer>
+<footer>Cold Read is MIT licensed. The companies on this page are invented. <a href="https://github.com/atlas-apex/cold-read">Source on GitHub</a>.</footer>
 </div>
 <script>
 document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){

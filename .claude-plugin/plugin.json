@@ -1,0 +1,11 @@
+{
+  "name": "cold-read",
+  "displayName": "Cold Read",
+  "version": "1.0.0",
+  "description": "Read any company from the outside before you invest, join or buy it: six-lane research from the public record, every claim marked cited, inferred or unknown.",
+  "author": { "name": "Ahmed Mohamed", "url": "https://github.com/atlas-apex/cold-read" },
+  "homepage": "https://atlas-apex.github.io/cold-read/",
+  "repository": "https://github.com/atlas-apex/cold-read",
+  "license": "MIT",
+  "keywords": ["company research", "due diligence", "outside view", "acquisition", "interview prep", "job boards", "filings"]
+}

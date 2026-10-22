@@ -28,16 +28,15 @@ Plus a **people** lane for the join lens, with no LinkedIn profile ever opened.
 
 ## Install
 
-```bash
-git clone https://github.com/atlas-apex/cold-read
-cd cold-read
-./install.sh claude     # ~/.claude/skills/cold-read
-./install.sh codex      # ~/.codex/skills/cold-read
-./install.sh all
-./install.sh /path/to/your/agent/skills
+Claude Code, one line:
+
+```
+/plugin install cold-read --marketplace atlas-apex/cold-read
 ```
 
-Cursor: copy `.cursor/rules/cold-read.mdc` into your project. Copilot: copy `.github/copilot-instructions.md`. Any other agent: add `AGENTS.md` to its instructions and keep `SKILL.md` and `references/` readable.
+Older Claude Code, two steps: `/plugin marketplace add atlas-apex/cold-read`, then `/plugin install cold-read@cold-read`. From the shell: `claude plugin install cold-read --marketplace atlas-apex/cold-read`. The skill then answers to `/cold-read` (or `/cold-read:cold-read`).
+
+Codex and other agents that read the Agent Skills format: clone the repo and run `./install.sh codex` (copies `skills/cold-read/` into `~/.codex/skills/`), or `./install.sh /path/to/your/agent/skills`. Cursor: copy `.cursor/rules/cold-read.mdc` into your project. Copilot: copy `.github/copilot-instructions.md`. Anything else: add `AGENTS.md` to its instructions and keep `skills/cold-read/` readable.
 
 Then ask: *"Cold read Acme Ltd before my interview on Thursday"* or *"Was Acme bought cheap, and what happens to its engineers?"*
 
@@ -53,16 +52,16 @@ Then ask: *"Cold read Acme Ltd before my interview on Thursday"* or *"Was Acme b
 ## Repository
 
 ```
-SKILL.md                   the skill (Agent Skills format)
-references/lanes.md        one paste-ready brief per lane
-references/sources.md      sources by country and type, public endpoints, commands, fallbacks
-references/outputs.md      output templates per lens
-examples/                  four worked outputs with invented data
-AGENTS.md                  generic agent instructions (Codex and others)
-.cursor/rules/             Cursor rule
+.claude-plugin/plugin.json          plugin manifest
+.claude-plugin/marketplace.json     this repo is also its own marketplace
+skills/cold-read/SKILL.md           the skill (Agent Skills format)
+skills/cold-read/references/        lanes, sources and endpoints, output templates
+skills/cold-read/examples/          four worked outputs with invented data
+AGENTS.md                           generic agent instructions (Codex and others)
+.cursor/rules/                      Cursor rule
 .github/copilot-instructions.md
-docs/                      the website
-install.sh
+docs/                               the website
+install.sh                          copies the skill for agents without plugins
 ```
 
 ## Licence

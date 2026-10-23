@@ -8,7 +8,7 @@ Run `python3 scripts/check_read.py <note.md>` before finishing. It fails on a mi
 
 File name: `YYYY-MM-DD-<company-or-companies>-<lens>.md`, lens one of `deal`, `join`, `invest`, `position`, `people`. Lane files sit beside it as `lane-1-corporate-record.md` through `lane-7-people.md`, with raw material in `raw/`.
 
-Every note starts with exactly these lines:
+Every note starts with exactly these lines (a YAML front matter block before them is allowed for notes kept in a vault; the checker skips it):
 
 ```
 # <Title in sentence case>

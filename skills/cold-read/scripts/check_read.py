@@ -34,6 +34,9 @@ def main():
     if not args:
         print(__doc__); sys.exit(2)
     path = pathlib.Path(args[0]); text = path.read_text(encoding="utf-8")
+    # a note kept in a vault may carry YAML front matter; the layout starts after it
+    fm = re.match(r"^---\n.*?\n---\n", text, re.S)
+    if fm: text = text[fm.end():].lstrip("\n")
     lens = None
     if "--lens" in sys.argv: lens = sys.argv[sys.argv.index("--lens") + 1]
     else:

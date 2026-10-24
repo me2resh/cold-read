@@ -8,6 +8,13 @@ set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 TARGET="${1:-all}"
 copy() { mkdir -p "$1"; rm -rf "$1/cold-read"; mkdir -p "$1/cold-read"; cp -R "$HERE/skills/cold-read/." "$1/cold-read/"; echo "installed: $1/cold-read"; }
+if [ "$TARGET" != "claude" ] && [ "$TARGET" != "codex" ] && [ "$TARGET" != "all" ]; then
+  case "$TARGET" in
+    */*|.|..|~*) ;;   # looks like a path
+    *) echo "Unknown target '$TARGET'. Usage: ./install.sh [claude|codex|all|/path/to/agent/skills]" >&2; exit 2 ;;
+  esac
+  [ -d "$(dirname "$TARGET")" ] || { echo "Parent folder of '$TARGET' does not exist." >&2; exit 2; }
+fi
 case "$TARGET" in
   claude) copy "$HOME/.claude/skills" ;;
   codex)  copy "$HOME/.codex/skills" ;;

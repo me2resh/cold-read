@@ -105,6 +105,9 @@ def main():
         if re.search(r"\"[^\"]{12,}\"", l) and not re.search(r"\d{4}", l):
             warns.append(f"line {i}: a quote without a year on the line")
 
+    FLOOR = {"deal": 60, "join": 40, "invest": 30, "position": 30, "people": 15}
+    if lens in FLOOR and len(defined) < FLOOR[lens]:
+        warns.append(f"only {len(defined)} footnotes; a {lens} read usually needs {FLOOR[lens]} or more. Thin lanes: " + ", ".join(sorted({l for l in ("s1","s2","s3","s4","s5","s6","s7")} - lanes)) + (" missing entirely" if ({"s1","s2","s3","s4","s5","s6","s7"} - lanes) else "") )
     for w in warns: print("warn:", w)
     for f in fails: print("FAIL:", f)
     print(f"{path.name}: {len(defined)} footnotes, {len(lanes)} lanes, {len(fails)} failures, {len(warns)} warnings")

@@ -7,7 +7,22 @@ Sample read: the company is a sample and the figures are illustrative; links poi
 
 ## 1. The answer in one paragraph
 
-Lanternglass Learning is a listed school-software company whose growth since 2023 has come from two acquisitions rather than from its own product: group revenue rose from GBP 40.9m in FY2022 to GBP 49.8m in FY2024, and GBP 11.2m of the FY2024 figure is the assessment business it bought ✅ [^s1-3] [^s1-4]. It paid 2.1x trailing revenue for that business, which was profitable, and 9x trailing revenue for a loss-making tutoring marketplace, with 81% of the second price booked as goodwill ✅ [^s1-3] [^s1-7] [^s1-9]. The job board shows where the money is going: 11 of 23 open engineering roles are for the marketplace and none are for the assessment product, whose brand was retired in March 2025 ✅ [^s6-1] [^s4-8]. The three-year case therefore rests on one segment reaching the margin the CEO guided to on the deal call, "a clear path to breakeven in FY2027", and that segment's margin has not yet been published ✅ [^s3-2]. The first disclosure is due in the FY2025 results on 12 March 2026 ✅ [^s1-14]. On the record to 3 February 2026 the answer is: not a three-year hold yet, because the one number that would make it one is not public; it becomes one if the March results show a Tuttlewick half-year loss small enough to reach breakeven on the guided timetable, and it stops being one if the loss widens or the earn-out is settled early 🟡, because an early settlement is the acquirer's own view of the target.
+**The short answer**
+
+- On the record to 3 February 2026 the answer is: not a three-year hold yet 🟡, because the one number that would make it one is not public.
+
+**The evidence**
+
+- Lanternglass Learning is a listed school-software company whose growth since 2023 has come from two acquisitions rather than from its own product: group revenue rose from GBP 40.9m in FY2022 to GBP 49.8m in FY2024, and GBP 11.2m of the FY2024 figure is the assessment business it bought ✅ [^s1-3] [^s1-4].
+- It paid 2.1x trailing revenue for that business, which was profitable, and 9x trailing revenue for a loss-making tutoring marketplace, with 81% of the second price booked as goodwill ✅ [^s1-3] [^s1-7] [^s1-9].
+- The job board shows where the money is going: 11 of 23 open engineering roles are for the marketplace and none are for the assessment product, whose brand was retired in March 2025 ✅ [^s6-1] [^s4-8].
+- The three-year case therefore rests on one segment reaching the margin the CEO guided to on the deal call, "a clear path to breakeven in FY2027", and that segment's margin has not yet been published ✅ [^s3-2].
+- The first disclosure is due in the FY2025 results on 12 March 2026 ✅ [^s1-14].
+
+**The position**
+
+- It becomes a three-year hold if the March results show a Tuttlewick half-year loss small enough to reach breakeven on the guided timetable 🟡, resting on the guidance and the disclosure date above.
+- It stops being one if the loss widens or the earn-out is settled early 🟡, because an early settlement is the acquirer's own view of the target.
 
 ## 2. Price against what was bought
 
@@ -21,9 +36,35 @@ Lanternglass Learning is a listed school-software company whose growth since 202
 | Goodwill share | GBP 9.1m of GBP 19m, 48% ✅ [^s1-3] | GBP 109.3m of GBP 135m, 81%, provisional ✅ [^s1-9] |
 | What was done with it | Brand retired March 2025; product folded into Lanternglass Assess; the old domain redirects to the Assess page ✅ [^s4-8] [^s2-9] [^s5-1] | Brand kept; app still sold under the Tuttlewick name; 11 of the 23 open engineering roles are Tuttlewick ✅ [^s2-3] [^s6-1] |
 
-The purchase price allocations say what each price bought. Quizzenby's GBP 19m split into customer relationships GBP 6.1m, technology GBP 2.4m, trade name GBP 0.6m, net tangible assets GBP 0.8m and goodwill GBP 9.1m ✅ [^s1-3]. The trade name was written off in full in FY2024, in a report covering a year that ended before the brand was retired, and the technology intangible is amortised over four years ✅ [^s1-5]. Quizzenby Ltd changed its name to a numbered dormant entity and filed dormant accounts on 31 March 2025 ✅ [^s1-11]. Tuttlewick's provisional allocation is technology GBP 11.2m, trade name GBP 3.4m, tutor and learner relationships GBP 9.5m, net tangible assets GBP 1.6m and goodwill GBP 109.3m, with the measurement period running to 30 June 2026 ✅ [^s1-9]. A trade name carried at GBP 3.4m and a brand kept on the app store are consistent with each other, and a trade name written off and a brand retired are consistent too 🟡, because in the first deal the accounting moved ahead of the operating announcement and the record shows the same order so far in the second.
+The purchase price allocations say what each price bought.
 
-The earn-out has not been settled, fixed or renegotiated ❔ not in the regulatory announcements list, the interims or the January trading update to 3 February 2026. The revenue targets behind it are not public; the circular gives only the GBP 21m maximum and the end date, and the FY2025 annual report's note on contingent consideration would carry the fair value the board has put on it ✅ [^s1-7]. The 22.5m consideration shares were issued at 240p and are locked up for 12 months to 30 June 2026 ✅ [^s1-8]. The shares closed at 212p on 2 February 2026 ✅ [^s1-17], 12% below the issue price 🟡, computed from the two cited figures. On 150.2m shares in issue that is a market value near GBP 318m and, with net debt of GBP 52m at 31 December 2025, an enterprise value near GBP 370m 🟡, computed from the share count in the completion notice, the closing price and the trading update [^s1-8] [^s1-10]. That is about 5.7x the sum of FY2024 group revenue and Tuttlewick's FY2024 standalone revenue, before any growth 🟡, computed from the same figures and the revenue lines above.
+**Quizzenby**
+
+- Quizzenby's GBP 19m split into customer relationships GBP 6.1m, technology GBP 2.4m, trade name GBP 0.6m, net tangible assets GBP 0.8m and goodwill GBP 9.1m ✅ [^s1-3].
+- The trade name was written off in full in FY2024, in a report covering a year that ended before the brand was retired ✅ [^s1-5].
+- The technology intangible is amortised over four years ✅ [^s1-5].
+- Quizzenby Ltd changed its name to a numbered dormant entity and filed dormant accounts on 31 March 2025 ✅ [^s1-11].
+
+**Tuttlewick**
+
+- Tuttlewick's provisional allocation is technology GBP 11.2m, trade name GBP 3.4m, tutor and learner relationships GBP 9.5m, net tangible assets GBP 1.6m and goodwill GBP 109.3m, with the measurement period running to 30 June 2026 ✅ [^s1-9].
+
+**What the two allocations say together**
+
+- A trade name carried at GBP 3.4m and a brand kept on the app store are consistent with each other, and a trade name written off and a brand retired are consistent too 🟡, because in the first deal the accounting moved ahead of the operating announcement and the record shows the same order so far in the second.
+
+**The earn-out**
+
+- The earn-out has not been settled, fixed or renegotiated ❔ not in the regulatory announcements list, the interims or the January trading update to 3 February 2026.
+- The revenue targets behind it are not public; the circular gives only the GBP 21m maximum and the end date, and the FY2025 annual report's note on contingent consideration would carry the fair value the board has put on it ✅ [^s1-7].
+
+**The shares and the value today**
+
+- The 22.5m consideration shares were issued at 240p and are locked up for 12 months to 30 June 2026 ✅ [^s1-8].
+- The shares closed at 212p on 2 February 2026 ✅ [^s1-17].
+- That is 12% below the issue price 🟡, computed from the two cited figures.
+- On 150.2m shares in issue that is a market value near GBP 318m and, with net debt of GBP 52m at 31 December 2025, an enterprise value near GBP 370m 🟡, computed from the share count in the completion notice, the closing price and the trading update [^s1-8] [^s1-10].
+- That is about 5.7x the sum of FY2024 group revenue and Tuttlewick's FY2024 standalone revenue, before any growth 🟡, computed from the same figures and the revenue lines above.
 
 ## 3. What it says and what it does
 
@@ -39,7 +80,11 @@ The earn-out has not been settled, fixed or renegotiated ❔ not in the regulato
 | 2025-09-18 | The CEO, interim results call | "Tuttlewick will remain a standalone brand with its own app." | The app store seller field is still the Tuttlewick company, last update 20 January 2026 ✅ [^s2-3]; the privacy policy dated 1 October 2025 names Lanternglass as data controller, which the May 2025 copy did not ✅ [^s3-6] [^s3-7] | ✅ [^s3-3] |
 | 2026-01-15 | The CEO, trading update | "Tuttlewick is trading in line with the acquisition case." | The update gives six-month Tuttlewick revenue of GBP 9.4m and bookings growth of 18% ✅ [^s1-10]; no loss figure ❔ not in the update or in the CEO's press interview the next day [^s3-4] | ✅ [^s1-10] |
 
-The pattern in the table: the product claims about Quizzenby held for about 20 months and were then reversed, with the accounting write-off of the trade name sitting in a report for a year that ended before the retirement was announced 🟡, resting on the FY2024 report and the March 2025 trade press item cited above. The money claims about Tuttlewick are untested: every one of them resolves in FY2026 or FY2027 and none has a published data point yet 🟡, as the not-found entries in the table show. The one claim already contradicted by the record is the capital markets day margin target, which the Tuttlewick loss makes arithmetically unreachable by FY2026 unless the marketplace is excluded from the measure 🟡, computed from the FY2024 segment margins and the standalone loss.
+The pattern in the table:
+
+- The product claims about Quizzenby held for about 20 months and were then reversed, with the accounting write-off of the trade name sitting in a report for a year that ended before the retirement was announced 🟡, resting on the FY2024 report and the March 2025 trade press item cited above.
+- The money claims about Tuttlewick are untested: every one of them resolves in FY2026 or FY2027 and none has a published data point yet 🟡, as the not-found entries in the table show.
+- The one claim already contradicted by the record is the capital markets day margin target, which the Tuttlewick loss makes arithmetically unreachable by FY2026 unless the marketplace is excluded from the measure 🟡, computed from the FY2024 segment margins and the standalone loss.
 
 ## 4. The business today
 
@@ -49,13 +94,53 @@ The pattern in the table: the product claims about Quizzenby held for about 20 m
 | Lanternglass Assess (the former Quizzenby) | GBP 11.2m, FY2024 ✅ [^s1-4] | 31% adjusted operating, FY2024 ✅ [^s1-4] | Revenue up 6% in FY2024; the segment note counts 1,830 schools against 1,900 at purchase, a 4% fall 🟡, because the two counts come from documents 20 months apart that may define a school differently [^s1-4] [^s1-1] | ✅ [^s1-4] |
 | Tuttlewick (tutoring marketplace) | GBP 9.4m for the six months to 31 December 2025 ✅ [^s1-10]; GBP 15.0m standalone in FY2024 ✅ [^s1-12] | Not public; the FY2024 standalone accounts show a GBP 6.8m pre-tax loss, and the first consolidated segment margin is due in the FY2025 results ✅ [^s1-12] [^s1-14] | Bookings up 18% year on year in the trading update ✅ [^s1-10] | ✅ [^s1-10] |
 
-Group revenue was GBP 49.8m in FY2024 with adjusted EBITDA of GBP 14.1m and an average of 412 employees ✅ [^s1-4]. Tuttlewick's registry accounts show 96 employees at 31 December 2024 ✅ [^s1-12]. Net debt was GBP 52m at 31 December 2025, drawn from a GBP 70m term facility put in place for the deal ✅ [^s1-10] [^s1-15]. The covenant is net debt to adjusted EBITDA of 3.0x, stepping down to 2.5x at the 30 June 2026 test ✅ [^s1-7]. The CEO has held the role since 2021 and the CFO since September 2024, so the Tuttlewick leverage guidance is the CFO's first deal guidance in the role ✅ [^s7-2] [^s1-13].
+**Group, debt and leadership**
 
-Pricing and product. Assess is sold at GBP 4.50 per pupil per year with a GBP 900 minimum per school ✅ [^s2-1]. Tuttlewick charges tutors a 25% commission on each booking ✅ [^s2-2]. On the GBP 61m of gross bookings in the press kit that implies revenue near GBP 15m, which matches the registry accounts 🟡, so the commission is the revenue line and bookings growth should carry through to revenue roughly one for one [^s2-6] [^s1-12]. The Tuttlewick app has a 4.3 rating from 2,100 ratings and was last updated on 20 January 2026 ✅ [^s2-3]. Of the 50 most recent reviews read on 3 February 2026, 9 mention difficulty finding a tutor at the wanted time ✅ [^s2-8]. The Quizzenby app was delisted between the February 2025 archived copy and the read date ✅ [^s2-4]. The Assess product page carries "formerly Quizzenby" in its first line ✅ [^s2-9]. Tuttlewick's help centre announced on 1 October 2025 that its tutor terms had changed to name Lanternglass as the contracting party ✅ [^s2-10]. Tutor churn is not on the record ❔ not in the press kit, the app listing, the circular or the help centre. The state-funded tutoring scheme that supplied part of the marketplace's demand closed on 31 August 2024 ✅ [^s4-7]. The six months compared in the trading update, July to December 2025 against July to December 2024, both fall after that closure, so the 18% bookings growth is like for like 🟡, because neither period contains scheme-funded demand.
+- Group revenue was GBP 49.8m in FY2024 with adjusted EBITDA of GBP 14.1m and an average of 412 employees ✅ [^s1-4].
+- Tuttlewick's registry accounts show 96 employees at 31 December 2024 ✅ [^s1-12].
+- Net debt was GBP 52m at 31 December 2025, drawn from a GBP 70m term facility put in place for the deal ✅ [^s1-10] [^s1-15].
+- The covenant is net debt to adjusted EBITDA of 3.0x, stepping down to 2.5x at the 30 June 2026 test ✅ [^s1-7].
+- The CEO has held the role since 2021 and the CFO since September 2024, so the Tuttlewick leverage guidance is the CFO's first deal guidance in the role ✅ [^s7-2] [^s1-13].
 
-Infrastructure. The Assess login page is served behind the group's identity provider, visible in the response headers ✅ [^s5-4]. The Tuttlewick domain's certificates are still issued to the Tuttlewick company and its mail records still point at its own provider ✅ [^s5-2] [^s5-3]. Whether that is a decision to keep the marketplace separate or a backlog is not public 🟡, because DNS shows what exists and not why, and no job ad or filing describes a tenant migration.
+**Pricing**
 
-Openings. The board carried 41 open roles on 3 February 2026: 23 engineering, 6 marketing, 5 operations and 7 other; 11 of the engineering roles and all 6 marketing roles name Tuttlewick ✅ [^s6-1]. The archived copy of the board from 10 July 2025 carried 3 marketing roles ✅ [^s6-2]. Assess has one open role, in customer support, and no engineering role ✅ [^s6-1]. Three ads carry the plan. A Head of Growth Marketing for Tuttlewick, posted 12 January 2026, asks for "paid acquisition at scale" ✅ [^s6-3]. A Senior Backend Engineer, posted 20 January 2026, names the marketplace's booking and payments services as the team's scope ✅ [^s6-4]. A Finance Business Partner for Tuttlewick, posted 2 December 2025, lists "earn-out reporting" among its duties ✅ [^s6-5]. A Tutor Supply Operations Lead, posted 28 January 2026, asks for experience in "re-activating lapsed supply" ✅ [^s6-7], which reads as a churn signal 🟡, because a marketplace that is growing supply does not usually advertise for re-activation.
+- Assess is sold at GBP 4.50 per pupil per year with a GBP 900 minimum per school ✅ [^s2-1].
+- Tuttlewick charges tutors a 25% commission on each booking ✅ [^s2-2].
+- On the GBP 61m of gross bookings in the press kit that implies revenue near GBP 15m, which matches the registry accounts 🟡, so the commission is the revenue line and bookings growth should carry through to revenue roughly one for one [^s2-6] [^s1-12].
+
+**Product and reviews**
+
+- The Tuttlewick app has a 4.3 rating from 2,100 ratings and was last updated on 20 January 2026 ✅ [^s2-3].
+- Of the 50 most recent reviews read on 3 February 2026, 9 mention difficulty finding a tutor at the wanted time ✅ [^s2-8].
+- The Quizzenby app was delisted between the February 2025 archived copy and the read date ✅ [^s2-4].
+- The Assess product page carries "formerly Quizzenby" in its first line ✅ [^s2-9].
+
+**Tutors and demand**
+
+- Tuttlewick's help centre announced on 1 October 2025 that its tutor terms had changed to name Lanternglass as the contracting party ✅ [^s2-10].
+- Tutor churn is not on the record ❔ not in the press kit, the app listing, the circular or the help centre.
+- The state-funded tutoring scheme that supplied part of the marketplace's demand closed on 31 August 2024 ✅ [^s4-7].
+- The six months compared in the trading update, July to December 2025 against July to December 2024, both fall after that closure, so the 18% bookings growth is like for like 🟡, because neither period contains scheme-funded demand.
+
+**Infrastructure**
+
+- The Assess login page is served behind the group's identity provider, visible in the response headers ✅ [^s5-4].
+- The Tuttlewick domain's certificates are still issued to the Tuttlewick company and its mail records still point at its own provider ✅ [^s5-2] [^s5-3].
+- Whether that is a decision to keep the marketplace separate or a backlog is not public 🟡, because DNS shows what exists and not why, and no job ad or filing describes a tenant migration.
+
+**Openings**
+
+- The board carried 41 open roles on 3 February 2026: 23 engineering, 6 marketing, 5 operations and 7 other; 11 of the engineering roles and all 6 marketing roles name Tuttlewick ✅ [^s6-1].
+- The archived copy of the board from 10 July 2025 carried 3 marketing roles ✅ [^s6-2].
+- Assess has one open role, in customer support, and no engineering role ✅ [^s6-1].
+
+Three ads carry the plan.
+
+- A Head of Growth Marketing for Tuttlewick, posted 12 January 2026, asks for "paid acquisition at scale" ✅ [^s6-3].
+- A Senior Backend Engineer, posted 20 January 2026, names the marketplace's booking and payments services as the team's scope ✅ [^s6-4].
+- A Finance Business Partner for Tuttlewick, posted 2 December 2025, lists "earn-out reporting" among its duties ✅ [^s6-5].
+- A Tutor Supply Operations Lead, posted 28 January 2026, asks for experience in "re-activating lapsed supply" ✅ [^s6-7].
+- That ad reads as a churn signal 🟡, because a marketplace that is growing supply does not usually advertise for re-activation.
 
 ## 5. The outside view
 
@@ -67,17 +152,65 @@ Openings. The board carried 41 open roles on 3 February 2026: 23 engineering, 6 
 | A ratings house | 2025-11-04 | Negative outlook on the facility | Net debt 2.7x its FY2025 estimate with no marketplace margin disclosed | ✅ [^s4-4] |
 | An independent research house | 2026-01-16 | Hold | Will not rate until the first Tuttlewick segment margin is published | ✅ [^s4-5] |
 
-Read as a range. The two Buys price the marketplace reaching breakeven on the guided timetable; the Sell and the ratings house price the next eighteen months of losses against the facility; the Hold says the same thing as this note, that the deciding number is not out yet 🟡, resting on the five views above. Consensus FY2025 adjusted EBITDA was GBP 19.2m on 3 February 2026 ✅ [^s4-13], and net debt of GBP 52m is 2.7x that figure 🟡, computed, which is where the ratings house lands. A trade newsletter item of 20 January 2026 says in its search snippet that the marketplace model has "not worked for a listed buyer yet"; the page could not be opened 🟡 [^s4-6]. On the base rate, a review of four listed education-software buyers that acquired a tutoring or courses marketplace between 2019 and 2023 found that three took a goodwill impairment within three years of completion and one reached segment breakeven, in its fourth year ✅ [^s4-9]. The base rate for breakeven in year two after a 9x purchase is therefore poor on that sample 🟡, with the caveat that the sample is four. The UK private tutoring market is put at GBP 2bn a year in a report whose page could not be opened 🟡 [^s4-10].
+**Read as a range**
 
-Regulatory. The assessment business sells into schools through a public-sector buying framework whose current term expires on 31 March 2027, and Lanternglass is listed on lot 1 ✅ [^s4-11]. The renewal tender is not yet published ❔ not on the framework page or the contracts notice search on 3 February 2026. A tender in autumn 2026 is the usual timing for a March expiry, so the renewal falls inside the hold period 🟡, by analogy with the 2023 framework's own timetable on the same page. The marketplace faces two live rules: the safeguarding guidance for online tutoring platforms issued in January 2025, which requires platforms to evidence vetting of tutors who work with children ✅ [^s4-12], and the children's data code, which applies to the learner app ✅ [^s4-8]. Neither has produced an enforcement action against the company ❔ not in the regulator's enforcement list or the trade press to 3 February 2026. The state-funded tutoring scheme ended in August 2024 with no successor announced on the closure page ✅ [^s4-7], so marketplace demand is private pay.
+- The two Buys price the marketplace reaching breakeven on the guided timetable 🟡, resting on the five views above.
+- The Sell and the ratings house price the next eighteen months of losses against the facility 🟡, resting on the same views.
+- The Hold says the same thing as this note, that the deciding number is not out yet 🟡, resting on the same views.
+
+**Consensus and leverage**
+
+- Consensus FY2025 adjusted EBITDA was GBP 19.2m on 3 February 2026 ✅ [^s4-13].
+- Net debt of GBP 52m is 2.7x that figure 🟡, computed, which is where the ratings house lands.
+
+**The base rate and the market**
+
+- A trade newsletter item of 20 January 2026 says in its search snippet that the marketplace model has "not worked for a listed buyer yet"; the page could not be opened 🟡 [^s4-6].
+- On the base rate, a review of four listed education-software buyers that acquired a tutoring or courses marketplace between 2019 and 2023 found that three took a goodwill impairment within three years of completion and one reached segment breakeven, in its fourth year ✅ [^s4-9].
+- The base rate for breakeven in year two after a 9x purchase is therefore poor on that sample 🟡, with the caveat that the sample is four.
+- The UK private tutoring market is put at GBP 2bn a year in a report whose page could not be opened 🟡 [^s4-10].
+
+**Regulatory: the assessment business**
+
+- The assessment business sells into schools through a public-sector buying framework whose current term expires on 31 March 2027, and Lanternglass is listed on lot 1 ✅ [^s4-11].
+- The renewal tender is not yet published ❔ not on the framework page or the contracts notice search on 3 February 2026.
+- A tender in autumn 2026 is the usual timing for a March expiry, so the renewal falls inside the hold period 🟡, by analogy with the 2023 framework's own timetable on the same page.
+
+**Regulatory: the marketplace**
+
+- The marketplace faces two live rules; the first is the safeguarding guidance for online tutoring platforms issued in January 2025, which requires platforms to evidence vetting of tutors who work with children ✅ [^s4-12].
+- The second is the children's data code, which applies to the learner app ✅ [^s4-8].
+- Neither has produced an enforcement action against the company ❔ not in the regulator's enforcement list or the trade press to 3 February 2026.
+- The state-funded tutoring scheme ended in August 2024 with no successor announced on the closure page ✅ [^s4-7], so marketplace demand is private pay.
 
 ## 6. What would settle it
 
-The one number is the Tuttlewick segment adjusted operating loss for the six months to 31 December 2025, together with the FY2026 margin guidance that comes with it. It is not public: the January trading update gave revenue and bookings only ✅ [^s1-10], and the interims consolidated no Tuttlewick trading because completion fell on the last day of the half ✅ [^s1-9] [^s1-8]. It next appears on 12 March 2026 in the FY2025 results ✅ [^s1-14], where Tuttlewick is reported as a segment because the circular committed to segment disclosure from the first full period ✅ [^s1-7].
+The one number is the Tuttlewick segment adjusted operating loss for the six months to 31 December 2025, together with the FY2026 margin guidance that comes with it.
 
-What the number has to show. The standalone loss was GBP 6.8m on GBP 15.0m of revenue in FY2024, a margin of minus 45% ✅ [^s1-12]. Breakeven in FY2027 from there means roughly halving the loss rate each year 🟡, so a half-year loss near GBP 2m on GBP 9.4m of revenue, around minus 20%, is on the path, a loss near GBP 4m is the old rate on more revenue, and anything above that is a widening. The second settling event is the earn-out: an announcement before 30 June 2027 that it has been settled, fixed or accelerated would say the board no longer expects the revenue targets to be met 🟡, because a buyer does not settle early an earn-out the seller is on course to earn. The third is the goodwill test: the FY2025 annual report's impairment note will state the headroom on the Tuttlewick cash-generating unit and the discount rate, in the format the FY2024 note used for Assess ✅ [^s1-5]; a headroom below 10% is the warning level 🟡, by the convention that a sensitivity disclosure is required when a reasonably possible change would remove it.
+**Whether it is public, and when it appears**
 
-If the March number is on the path, the hold case is that Core and Assess at a blended margin near 25% fund the marketplace to breakeven, leverage falls through the 2.5x covenant step, and the shares re-rate as the loss-making segment stops being one 🟡, resting on the margins, the covenant and the guidance cited above. If it is not, the hold becomes a wait for the earn-out settlement and the impairment, both inside 18 months 🟡, on the same record.
+- It is not public: the January trading update gave revenue and bookings only ✅ [^s1-10].
+- The interims consolidated no Tuttlewick trading because completion fell on the last day of the half ✅ [^s1-9] [^s1-8].
+- It next appears on 12 March 2026 in the FY2025 results ✅ [^s1-14].
+- Tuttlewick is reported there as a segment because the circular committed to segment disclosure from the first full period ✅ [^s1-7].
+
+**What the number has to show**
+
+- The standalone loss was GBP 6.8m on GBP 15.0m of revenue in FY2024, a margin of minus 45% ✅ [^s1-12].
+- Breakeven in FY2027 from there means roughly halving the loss rate each year 🟡, resting on that margin.
+- So a half-year loss near GBP 2m on GBP 9.4m of revenue, around minus 20%, is on the path 🟡, on the same arithmetic.
+- A loss near GBP 4m is the old rate on more revenue, and anything above that is a widening 🟡, on the same arithmetic.
+
+**The other two settling events**
+
+- The second settling event is the earn-out: an announcement before 30 June 2027 that it has been settled, fixed or accelerated would say the board no longer expects the revenue targets to be met 🟡, because a buyer does not settle early an earn-out the seller is on course to earn.
+- The third is the goodwill test: the FY2025 annual report's impairment note will state the headroom on the Tuttlewick cash-generating unit and the discount rate, in the format the FY2024 note used for Assess ✅ [^s1-5].
+- A headroom below 10% is the warning level 🟡, by the convention that a sensitivity disclosure is required when a reasonably possible change would remove it.
+
+**The two outcomes**
+
+- If the March number is on the path, the hold case is that Core and Assess at a blended margin near 25% fund the marketplace to breakeven, leverage falls through the 2.5x covenant step, and the shares re-rate as the loss-making segment stops being one 🟡, resting on the margins, the covenant and the guidance cited above.
+- If it is not, the hold becomes a wait for the earn-out settlement and the impairment, both inside 18 months 🟡, on the same record.
 
 ## 7. Signals to watch, dated
 

@@ -73,3 +73,7 @@ install.sh                          copies the skill for agents without plugins
 ## Licence
 
 MIT.
+
+---
+
+Part of [me2resh skills](https://github.com/me2resh/skills), free and open source: Cold Read, Field Read, Tayyib and Job Apply. Add them all with `/plugin marketplace add me2resh/skills`.

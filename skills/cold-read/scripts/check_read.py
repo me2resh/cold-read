@@ -40,7 +40,7 @@ def main():
     lens = None
     if "--lens" in sys.argv: lens = sys.argv[sys.argv.index("--lens") + 1]
     else:
-        m = re.search(r"-(deal|join|invest|position|people)\.md$", path.name)
+        m = re.search(r"-(deal|join|invest|position|people)\.md$", path.name) or re.match(r"(deal|join|invest|position|people)-", path.name)
         lens = m.group(1) if m else None
     fails, warns = [], []
     lines = text.splitlines()
@@ -98,6 +98,17 @@ def main():
         if re.search(r"(£|\$|€|GBP|USD|EUR|AUD)\s?\d|\d+(\.\d+)?x\b|\d+%", l) and not any(c in l for c in MARKS) \
            and not l.startswith("|--") and "not public" not in l.lower():
             warns.append(f"line {i}: a figure with no mark on the line")
+
+    # long paragraphs: findings belong in bullets or tables (writing rules, outputs.md section 9)
+    in_src = False
+    for i, l in enumerate(lines, 1):
+        if re.match(r"^## .*Sources by lane", l): in_src = True
+        if in_src: break
+        s = l.strip()
+        if not s or s.startswith(("#", "|", "-", "*", ">", "[^", "Read on", "Legend:", "Sources:")) or re.match(r"^\d+\.\s", s):
+            continue
+        if len(s.split()) > 60:
+            warns.append(f"line {i}: a paragraph of {len(s.split())} words; write it as bullets, one fact per bullet")
 
     # quotes need a who and when nearby (same line)
     for i, l in enumerate(lines, 1):

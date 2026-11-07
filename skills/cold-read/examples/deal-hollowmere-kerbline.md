@@ -8,7 +8,21 @@ Sample read: the companies are samples and the figures are illustrative; links p
 
 ## 1. The answer in one paragraph
 
-Hollowmere Fleet Software bought Kerbline for its 1,900 courier customers and its carrier integrations, not for its platform. The purchase price allocation books the carrier integrations at GBP 12.0m and the developed technology at GBP 6.1m, with the Kerbline trade name at GBP 1.9m, under a tenth of the price ✅ ([FY2025 annual report, note 14](https://example.org/hollowmere/ir/annual-report-2025#note-14))[^s1-4]. Nine months after close, Kerbline's pricing page redirects to Hollowmere's last-mile page, Kerbline's privacy notice names Hollowmere as controller, and a Hollowmere ad describes "bringing two engineering organisations together" ✅ [^s3-3] [^s3-5] [^s6-2]. The two job boards now read as one plan: forty-one open roles at Hollowmere, two at Kerbline, both in support ✅ [^s6-1] [^s6-4]. Five comparable UK vertical-software deals since 2019 absorbed the acquired platform within 24 months of close and retired the brand in four cases ✅ [^s4-6] [^s4-7] [^s4-8] [^s4-9] [^s4-10]. The reading is that the Kerbline platform is absorbed between June 2026 and June 2027, with the customer-facing app the last thing to move, and that the Bristol engineers who know the carrier integrations are the ones Hollowmere paid for and will keep 🟡, because the allocation, the ads and the comparables all point the same way.
+**The short answer**
+
+- Hollowmere Fleet Software bought Kerbline for its 1,900 courier customers and its carrier integrations, not for its platform.
+
+**The evidence**
+
+- The purchase price allocation books the carrier integrations at GBP 12.0m and the developed technology at GBP 6.1m, with the Kerbline trade name at GBP 1.9m, under a tenth of the price ✅ ([FY2025 annual report, note 14](https://example.org/hollowmere/ir/annual-report-2025#note-14))[^s1-4].
+- Nine months after close, Kerbline's pricing page redirects to Hollowmere's last-mile page, Kerbline's privacy notice names Hollowmere as controller, and a Hollowmere ad describes "bringing two engineering organisations together" ✅ [^s3-3] [^s3-5] [^s6-2].
+- The two job boards now read as one plan: forty-one open roles at Hollowmere, two at Kerbline, both in support ✅ [^s6-1] [^s6-4].
+- Five comparable UK vertical-software deals since 2019 absorbed the acquired platform within 24 months of close and retired the brand in four cases ✅ [^s4-6] [^s4-7] [^s4-8] [^s4-9] [^s4-10].
+
+**The position**
+
+- The Kerbline platform is absorbed between June 2026 and June 2027, with the customer-facing app the last thing to move 🟡, because the allocation, the ads and the comparables all point the same way.
+- The Bristol engineers who know the carrier integrations are the ones Hollowmere paid for and will keep 🟡, for the same reason.
 
 ## 2. The deals, side by side
 
@@ -22,7 +36,10 @@ Hollowmere Fleet Software bought Kerbline for its 1,900 courier customers and it
 | Earn-out status | "All contingencies attaching to the Kerbline earn-out for FY2026 and FY2027 have been resolved; fixed amounts of GBP 9.2m and GBP 6.8m are payable in March 2027 and March 2028" ✅ ([H1 2026 interim report, note 9](https://example.org/hollowmere/ir/interim-2026#note-9))[^s1-5]. 🟡 Fixing an earn-out eighteen months early at GBP 16.0m against a GBP 25.0m maximum usually means a negotiated settlement, which usually means the targets were not going to be met on the original terms, or the sellers wanted certainty before an integration they did not control | Paid in full, GBP 11.0m, in FY2025 ✅ [^s1-4] |
 | Goodwill impairment | None in FY2025; one cash-generating unit ✅ [^s1-4] | None ✅ [^s1-4] |
 
-Price per customer: about GBP 25k for Kerbline against about GBP 173k for Wayfold, on the customer counts in the two announcements ✅ [^s1-1] [^s1-7]. Trailing revenue: Kerbline filed GBP 14.2m turnover for FY2024, a 3.4x multiple, against Wayfold's GBP 21.0m, 5.4x ✅ ([Kerbline Ltd accounts, FY2024](https://example.org/registry/kerbline-ltd/accounts-2024))[^s2-1] [^s1-7]. Kerbline was profitable at sale, GBP 1.1m after tax ✅ [^s2-1]; Wayfold was loss-making ✅ [^s1-7].
+- Price per customer: about GBP 25k for Kerbline against about GBP 173k for Wayfold, on the customer counts in the two announcements ✅ [^s1-1] [^s1-7].
+- Trailing revenue: Kerbline filed GBP 14.2m turnover for FY2024, a 3.4x multiple, against Wayfold's GBP 21.0m, 5.4x ✅ ([Kerbline Ltd accounts, FY2024](https://example.org/registry/kerbline-ltd/accounts-2024))[^s2-1] [^s1-7].
+- Kerbline was profitable at sale, GBP 1.1m after tax ✅ [^s2-1].
+- Wayfold was loss-making ✅ [^s1-7].
 
 ## 3. What it says and what it does
 
@@ -50,7 +67,9 @@ Price per customer: about GBP 25k for Kerbline against about GBP 173k for Wayfol
 
 ### 3c. The brand and platform plan, as far as it can be read
 
-The brand went first and quietly: the pricing page, the privacy notice and the ads all say Hollowmere, while the Kerbline name survives on the login page and the mobile app ✅ [^s3-3] [^s3-5] [^s2-3]. The platform is next: the CEO's "one platform by the end of next year" is the first dated statement, and it points at December 2027 ✅ [^s3-7]. The sequence matches the pattern in the comparables, brand before platform, platform before people 🟡 (§7c).
+- The brand went first and quietly: the pricing page, the privacy notice and the ads all say Hollowmere, while the Kerbline name survives on the login page and the mobile app ✅ [^s3-3] [^s3-5] [^s2-3].
+- The platform is next: the CEO's "one platform by the end of next year" is the first dated statement, and it points at December 2027 ✅ [^s3-7].
+- The sequence matches the pattern in the comparables, brand before platform, platform before people 🟡 (§7c).
 
 ## 4. The integration so far
 
@@ -74,7 +93,12 @@ The brand went first and quietly: the pricing page, the privacy notice and the a
 
 Kerbline ran its own estate: a Rails application on a UK cloud region, a mobile app for drivers, and the carrier integrations as a separate service with its own hostname ✅ [^s2-2] [^s5-2] [^s6-5]. Hollowmere runs a Java platform on a different cloud, with Wayfold's routing engine as a service inside it since 2024 ✅ [^s3-1] [^s6-6].
 
-Three signals say the estates are being joined at the edges first. Kerbline's corporate mail moved to Hollowmere's mail-security tenant in September 2025 ✅ [^s5-1]. The certificate for Kerbline's web app was issued in February 2026 under the same certificate account as Hollowmere's, which is what happens when one platform team takes over the renewals ✅ [^s5-3]. Kerbline's identity provider hostname still resolves to Kerbline's own cloud, so single sign-on has not moved ✅ [^s5-4]. The driver app's last update was 2026-01-28, developer name still Kerbline Ltd ✅ ([app listing](https://example.org/appstore/kerbline-driver))[^s2-3].
+Three signals say the estates are being joined at the edges first:
+
+- Kerbline's corporate mail moved to Hollowmere's mail-security tenant in September 2025 ✅ [^s5-1].
+- The certificate for Kerbline's web app was issued in February 2026 under the same certificate account as Hollowmere's, which is what happens when one platform team takes over the renewals ✅ [^s5-3].
+- Kerbline's identity provider hostname still resolves to Kerbline's own cloud, so single sign-on has not moved ✅ [^s5-4].
+- The driver app's last update was 2026-01-28, developer name still Kerbline Ltd ✅ ([app listing](https://example.org/appstore/kerbline-driver))[^s2-3].
 
 A cutover would show as: the Kerbline web app's hostname pointing at Hollowmere's CDN; the driver app republished under Hollowmere's developer account; the carrier-integration hostname retired; a customer email about "your new login" 🟡, each of which is a dated public event the signals table (§11) waits for.
 
@@ -133,7 +157,10 @@ Kerbline's board still exposes a department taxonomy of Engineering, Product, Da
 
 ### 7b. Regulatory climate
 
-The data regulator's 2025 guidance on controller changes after acquisitions requires customer notice before data moves between group entities, which is the likely reason the privacy notice changed in December before any migration ad appeared ✅ [^s4-5] 🟡. No competition review was required at this size ✅ [^s1-2]. Nothing in the carrier networks' public partner terms restricts assignment on change of control ❔ not in the three partner pages read; the agreements themselves are not public.
+- The data regulator's 2025 guidance on controller changes after acquisitions requires customer notice before data moves between group entities ✅ [^s4-5].
+- That guidance is the likely reason the privacy notice changed in December before any migration ad appeared 🟡 (§3b).
+- No competition review was required at this size ✅ [^s1-2].
+- Nothing in the carrier networks' public partner terms restricts assignment on change of control ❔ not in the three partner pages read; the agreements themselves are not public.
 
 ### 7c. Comparables
 
@@ -147,11 +174,33 @@ The data regulator's 2025 guidance on controller changes after acquisitions requ
 
 ### 7d. The general pattern
 
-In five UK vertical-software acquisitions since 2019 the acquired brand was retired within 18 months in four, the platform absorbed within 24 months in four, and the founders or CTO gone within 12 months in four ✅ [^s4-6] [^s4-7] [^s4-9] [^s4-10]. The exception kept the product as a separate line because it served a different customer than the acquirer's, which is not Kerbline's case: Hollowmere sells to the same courier operators ✅ [^s4-8] [^s3-1]. The acquirer's own prior deal is the closest comparable and the fastest: Wayfold's brand went in eight months and its team merged into Leeds in fourteen ✅ [^s4-10]. A UK engineering organisation inside such an acquirer should expect the duplicated leadership and back office to go first, then the platform, then the product engineering, with the integration specialists kept longest 🟡, which is the order the ads already show (§6b).
+**Across the five deals since 2019**
+
+- In five UK vertical-software acquisitions since 2019, the acquired brand was retired within 18 months in four ✅ [^s4-6] [^s4-7] [^s4-9] [^s4-10].
+- The platform was absorbed within 24 months in four ✅ [^s4-6] [^s4-7] [^s4-9] [^s4-10].
+- The founders or CTO were gone within 12 months in four ✅ [^s4-6] [^s4-7] [^s4-9] [^s4-10].
+
+**The exception and the closest case**
+
+- The exception kept the product as a separate line because it served a different customer than the acquirer's, which is not Kerbline's case: Hollowmere sells to the same courier operators ✅ [^s4-8] [^s3-1].
+- The acquirer's own prior deal is the closest comparable and the fastest: Wayfold's brand went in eight months and its team merged into Leeds in fourteen ✅ [^s4-10].
+
+**What follows**
+
+- A UK engineering organisation inside such an acquirer should expect the duplicated leadership and back office to go first, then the platform, then the product engineering, with the integration specialists kept longest 🟡, which is the order the ads already show (§6b).
 
 ## 8. What it means for the acquired company
 
-Kerbline as a company is being reduced to the parts that cannot be moved: the carrier integrations, the customer contracts and, for a while, the Bristol support desk 🟡 (§2, §6a). The assets Hollowmere paid for and will keep are the integrations (GBP 12.0m on the balance sheet) and the customer relationships (GBP 4.4m) ✅ [^s1-4]. The assets it did not pay for are the platform (GBP 6.1m, a third of the integrations) and the brand (GBP 1.9m) ✅ [^s1-4]. The likely window for the platform cutover is June 2026 to June 2027: ad 3's "Q4" for the data, the CEO's "end of next year" for the platform, and the comparables' 14 to 24 months 🟡 [^s6-7] [^s3-7] [^s4-10]. The surviving roles are the engineers who know the carrier APIs and whoever runs support through the cutover 🟡, because those are the two things named in the five ads that matter (§6b).
+**What stays and what Hollowmere paid for**
+
+- Kerbline as a company is being reduced to the parts that cannot be moved: the carrier integrations, the customer contracts and, for a while, the Bristol support desk 🟡 (§2, §6a).
+- The assets Hollowmere paid for and will keep are the integrations (GBP 12.0m on the balance sheet) and the customer relationships (GBP 4.4m) ✅ [^s1-4].
+- The assets it did not pay for are the platform (GBP 6.1m, a third of the integrations) and the brand (GBP 1.9m) ✅ [^s1-4].
+
+**Timing and people**
+
+- The likely window for the platform cutover is June 2026 to June 2027: ad 3's "Q4" for the data, the CEO's "end of next year" for the platform, and the comparables' 14 to 24 months 🟡 [^s6-7] [^s3-7] [^s4-10].
+- The surviving roles are the engineers who know the carrier APIs and whoever runs support through the cutover 🟡, because those are the two things named in the five ads that matter (§6b).
 
 ## 9. What it means for the reader
 
@@ -159,7 +208,12 @@ Removed from the shareable copy.
 
 ## 10. Legal pointer
 
-Where a function moves between group entities, employees in the United Kingdom may be covered by transfer-of-undertakings rules even when their work does not change; dismissals by reason of a transfer need a valid economic, technical or organisational reason; collective consultation thresholds apply to redundancies of twenty or more at one establishment within ninety days; the Kerbline earn-out is a contract between the sellers and Hollowmere and does not alter employees' rights. A pointer, not advice.
+- Where a function moves between group entities, employees in the United Kingdom may be covered by transfer-of-undertakings rules even when their work does not change.
+- Dismissals by reason of a transfer need a valid economic, technical or organisational reason.
+- Collective consultation thresholds apply to redundancies of twenty or more at one establishment within ninety days.
+- The Kerbline earn-out is a contract between the sellers and Hollowmere and does not alter employees' rights.
+
+A pointer, not advice.
 
 ## 11. Signals to watch, dated
 

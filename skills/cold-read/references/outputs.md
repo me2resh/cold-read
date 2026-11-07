@@ -22,7 +22,7 @@ The title names the companies and the question, never the lens word: "Hollowmere
 
 ## 2. Marks and citations
 
-- Every sentence that states a fact about the company ends with a mark. A paragraph of facts carries a mark per sentence, not one at the end.
+- Every bullet or sentence that states a fact about the company ends with a mark. Write facts as bullets, one fact per bullet, so each carries its own mark.
 - ✅ is always followed by its evidence: an inline link `([short label](url))`, a footnote `[^s<lane>-<n>]`, or both. Both for a number that matters. A ✅ with neither is an error.
 - 🟡 carries its reasoning in the same sentence ("🟡, because the same vendor appears on both estates") or names the ✅ facts it rests on.
 - ❔ says what was looked at ("❔ not in the annual report, the registry or the three ads read").
@@ -30,6 +30,14 @@ The title names the companies and the question, never the lens word: "Hollowmere
 - A number is never bare. Price, count, date, multiple, percentage: each carries a mark and a source.
 - Quotes are verbatim, in double quotes, with speaker, occasion and date.
 - Dates are `D Month YYYY` in prose and `YYYY-MM-DD` in tables.
+
+## 2a. Section 1 of every skeleton
+
+The first section keeps its heading ("The answer in one paragraph", or "The platform in one paragraph" for join) so older notes and the checker still match, but its body is four to eight bullets in three bold groups:
+
+- **The short answer:** the answer to the one question, in one or two bullets.
+- **The evidence:** the three to five facts it rests on, each with its mark and source.
+- **The position** (deal, invest, position) or **The mandate** (join): what follows, marked 🟡 with the facts it rests on.
 
 ## 3. Skeleton A: deal (acquisition or integration)
 
@@ -167,7 +175,9 @@ For scale: a full deal read runs 400 to 700 lines with 100 to 200 footnotes; a j
 
 ## 9. Writing rules
 
-- Plain sentences. A table where items are parallel. No marketing adjectives.
+- Bullets, not paragraphs. Group related facts under a short bold label (for example **The short answer**, **The evidence**, **The position**), one fact per bullet, each bullet a plain sentence with its mark. A table where items are parallel.
+- No paragraph longer than two sentences or about 60 words; the checker warns on longer ones. Prose is for a single framing line, not for the findings.
+- No marketing adjectives.
 - Real names for companies, brands and executives named in public filings or press. Initials or no names for staff below executive level, and for anyone known only from inside.
 - Say "not public" rather than estimating; name the source that would settle it.
 - The reader's own notes are never referenced in the shareable copy.

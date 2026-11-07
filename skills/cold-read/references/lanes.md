@@ -9,9 +9,11 @@ Legend: ✅ cited to a source read today (linked); 🟡 inferred or from a snipp
 ## Sources and how each was read   (table: source | status | fallbacks tried)
 ## Ten facts that matter most       (numbered, each with a mark and a link)
 ## Findings                          (tables by topic)
-## What it implies                   (🟡 paragraphs, kept short)
+## What it implies                   (🟡 bullets, one inference each, naming the facts it rests on)
 ## Sources                           (every URL used)
 ```
+
+Write findings as tables or bullets, never as long paragraphs: one fact per bullet with its mark.
 
 Save raw material (JSON from boards, DNS output, archived HTML) next to the lane file.
 

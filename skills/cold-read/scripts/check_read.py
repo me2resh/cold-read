@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check a Cold Read note against the output specification (references/outputs.md).
 
-Usage: python3 check_read.py <note.md> [--lens deal|join|invest|position|people]
+Usage: python3 check_read.py <note.md> [--lens deal|join|invest|position|compete|partner|people]
 The lens is inferred from the file name when not given. Exit 1 on any failure.
 """
 import re, sys, pathlib
@@ -25,6 +25,17 @@ SKELETONS = {
     "position": ["1. The answer in one paragraph", "2. Market map", "3. The moat, as the record shows it",
                  "4. Regulatory climate", "5. What it says and what it does",
                  "6. Three dated events that would change the ranking", "7. Sources by lane"],
+    "compete": ["1. The answer in one paragraph", "2. What they sell, to whom, at what price",
+                "3. Traction, as far as the record shows it", "4. What it says and what it does",
+                "5. Where they are heading", "5a. What shipped in the last twelve months", "5b. The openings as a roadmap",
+                "6. Where they are strong and where they are exposed", "7. Head to head",
+                "8. How they are likely to respond", "9. Signals to watch, dated", "10. Sources by lane"],
+    "partner": ["1. The answer in one paragraph", "2. Who they are and who decides", "3. Can they deliver",
+                "3a. Money and staying power", "3b. Capacity and track record", "4. How they treat partners",
+                "5. What they want from this", "5a. Business model and how they charge", "5b. What they want",
+                "6. Where interests conflict", "7. Dependency and exit",
+                "8. What it says and what it does", "9. Terms to ask for and questions to put openly",
+                "10. What it means for the reader", "11. Signals to watch, dated", "12. Sources by lane"],
     "people": None,  # numbered per person; checked structurally below
 }
 MARKS = "✅🟡❔"
@@ -40,7 +51,7 @@ def main():
     lens = None
     if "--lens" in sys.argv: lens = sys.argv[sys.argv.index("--lens") + 1]
     else:
-        m = re.search(r"-(deal|join|invest|position|people)\.md$", path.name)
+        m = re.search(r"-(deal|join|invest|position|compete|partner|people)\.md$", path.name) or re.match(r"(deal|join|invest|position|compete|partner|people)-", path.name)
         lens = m.group(1) if m else None
     fails, warns = [], []
     lines = text.splitlines()
@@ -99,13 +110,24 @@ def main():
            and not l.startswith("|--") and "not public" not in l.lower():
             warns.append(f"line {i}: a figure with no mark on the line")
 
+    # long paragraphs: findings belong in bullets or tables (writing rules, outputs.md section 11)
+    in_src = False
+    for i, l in enumerate(lines, 1):
+        if re.match(r"^## .*Sources by lane", l): in_src = True
+        if in_src: break
+        s = l.strip()
+        if not s or s.startswith(("#", "|", "-", "*", ">", "[^", "Read on", "Legend:", "Sources:")) or re.match(r"^\d+\.\s", s):
+            continue
+        if len(s.split()) > 60:
+            warns.append(f"line {i}: a paragraph of {len(s.split())} words; write it as bullets, one fact per bullet")
+
     # quotes need a who and when nearby (same line)
     for i, l in enumerate(lines, 1):
-        if in_sources: break
+        if re.match(r"^## .*Sources by lane", l): break
         if re.search(r"\"[^\"]{12,}\"", l) and not re.search(r"\d{4}", l):
             warns.append(f"line {i}: a quote without a year on the line")
 
-    FLOOR = {"deal": 60, "join": 40, "invest": 30, "position": 30, "people": 15}
+    FLOOR = {"deal": 60, "join": 40, "invest": 30, "position": 30, "compete": 30, "partner": 30, "people": 15}
     if lens in FLOOR and len(defined) < FLOOR[lens]:
         missing = sorted({"s1","s2","s3","s4","s5","s6","s7"} - lanes)
         warns.append(f"only {len(defined)} footnotes; a {lens} read usually needs {FLOOR[lens]} or more" + (f"; lanes with no sources: {', '.join(missing)}" if missing else ""))

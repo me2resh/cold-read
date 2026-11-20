@@ -7,7 +7,22 @@ Sample read: the company is a sample and the figures are illustrative; links poi
 
 ## 1. The platform in one paragraph
 
-Platterloop sells ordering, kitchen display and payments to about 2,400 UK restaurants, the count the homepage carried on the day of the read ✅ [^s2-8]. The pricing page sells the three products as separate tiers, and the FY2024 accounts put 70% of revenue on the ordering product alone ✅ [^s2-1] [^s1-2]. The estate is one Rails monolith on AWS London with a React front end and a React Native staff app, as the ads and the response headers agree ✅ [^s6-3] [^s5-3]. A newer Go payments service sits between the monolith and the card acquirer, described in an engineering post of 9 September 2025 ✅ [^s3-7]. Ads posted since January 2026 describe a split of the monolith into "ordering" and "kitchen" services and a move of reporting from Postgres read replicas to a cloud data warehouse ✅ [^s6-3] [^s6-4] [^s6-7]. Whether any slice of the split has shipped is 🟡, because the ads say the work "has started" (Senior Backend Engineer (Ordering) ad, 27 January 2026) and no changelog entry names a service. The founder CTO is moving to product and the Head of Engineering role will report to the CEO, both stated in the ad ✅ [^s6-2]. Fourteen roles were open on the applicant-tracking board on the day of the read, nine of them in engineering ✅ [^s6-1].
+**The short answer**
+
+- Platterloop sells ordering, kitchen display and payments to about 2,400 UK restaurants, the count the homepage carried on the day of the read ✅ [^s2-8].
+- The estate is one Rails monolith on AWS London with a React front end and a React Native staff app, as the ads and the response headers agree ✅ [^s6-3] [^s5-3].
+
+**The evidence**
+
+- The pricing page sells the three products as separate tiers, and the FY2024 accounts put 70% of revenue on the ordering product alone ✅ [^s2-1] [^s1-2].
+- A newer Go payments service sits between the monolith and the card acquirer, described in an engineering post of 9 September 2025 ✅ [^s3-7].
+- Ads posted since January 2026 describe a split of the monolith into "ordering" and "kitchen" services and a move of reporting from Postgres read replicas to a cloud data warehouse ✅ [^s6-3] [^s6-4] [^s6-7].
+- Fourteen roles were open on the applicant-tracking board on the day of the read, nine of them in engineering ✅ [^s6-1].
+
+**The mandate**
+
+- The founder CTO is moving to product and the Head of Engineering role will report to the CEO, both stated in the ad ✅ [^s6-2].
+- Whether any slice of the split has shipped is 🟡, because the ads say the work "has started" (Senior Backend Engineer (Ordering) ad, 27 January 2026) and no changelog entry names a service.
 
 ## 2. Chapters
 
@@ -15,7 +30,9 @@ The chapters follow the order the company uses on its own product navigation: or
 
 ### 2.1 Ordering
 
-Ordering is the oldest product and the one most customers buy; the pricing page sells it on its own and the accounts put 70% of FY2024 revenue on it ✅ [^s2-1] [^s1-2]. The ordering product page describes QR ordering at the table, a staff app for order taking and a till integration ✅ [^s2-2]. Four open ads sit in this area: two backend, one React Native, one engineering manager ✅ [^s6-1].
+- Ordering is the oldest product and the one most customers buy; the pricing page sells it on its own and the accounts put 70% of FY2024 revenue on it ✅ [^s2-1] [^s1-2].
+- The ordering product page describes QR ordering at the table, a staff app for order taking and a till integration ✅ [^s2-2].
+- Four open ads sit in this area: two backend, one React Native, one engineering manager ✅ [^s6-1].
 
 | Component | What it does | Runs on today | Mark | Where it is heading |
 |---|---|---|---|---|
@@ -27,7 +44,9 @@ Ordering is the oldest product and the one most customers buy; the pricing page 
 
 ### 2.2 Kitchen display
 
-The kitchen display product runs on tablets in the kitchen and takes orders from the ordering product; the product page describes it as "works when the wifi drops" ✅ [^s2-3]. The Android store listing for the kitchen app shows its last update on 2026-03-26 ✅ [^s2-6]. One ad, Senior Backend Engineer (Kitchen), is open in this area ✅ [^s6-4].
+- The kitchen display product runs on tablets in the kitchen and takes orders from the ordering product; the product page describes it as "works when the wifi drops" ✅ [^s2-3].
+- The Android store listing for the kitchen app shows its last update on 2026-03-26 ✅ [^s2-6].
+- One ad, Senior Backend Engineer (Kitchen), is open in this area ✅ [^s6-4].
 
 | Component | What it does | Runs on today | Mark | Where it is heading |
 |---|---|---|---|---|
@@ -38,7 +57,9 @@ The kitchen display product runs on tablets in the kitchen and takes orders from
 
 ### 2.3 Payments
 
-Payments is the newest product and the one the CEO calls the growth bet: "payments is where the next three years come from" (trade press interview, 11 February 2026) ✅ [^s3-4]. The payments page sells card terminals, tap to pay on the staff app and a fee "from 1.4%" per transaction ✅ [^s2-4]. One Go ad is open in this area ✅ [^s6-5].
+- Payments is the newest product and the one the CEO calls the growth bet: "payments is where the next three years come from" (trade press interview, 11 February 2026) ✅ [^s3-4].
+- The payments page sells card terminals, tap to pay on the staff app and a fee "from 1.4%" per transaction ✅ [^s2-4].
+- One Go ad is open in this area ✅ [^s6-5].
 
 | Component | What it does | Runs on today | Mark | Where it is heading |
 |---|---|---|---|---|
@@ -62,27 +83,78 @@ Reporting today is a set of owner dashboards on Postgres read replicas, as the D
 
 ## 3. Platform, infrastructure, delivery and quality
 
-The Platform Engineer ad names AWS eu-west-2, ECS on Fargate, Terraform, the git host's hosted CI and a hosted observability vendor ✅ [^s6-6]. The status page monitors the same observability vendor's endpoint and lists the API, the ordering page, the kitchen app and payments as four components ✅ [^s5-4] [^s2-10]. DNS resolves the API hostname to an application load balancer in eu-west-2 (`dig +short api.platterloop.example.org`, run 9 May 2026) ✅ [^s5-1]. The certificate log shows 23 hostnames issued since 2024-01-01, among them `kds.`, `pay.`, `events.` and `api-v2.` ✅ [^s5-2]. The `api-v2.` hostname is 🟡 as the home of the split services, because it appears in the certificate log and in no ad or page. The archived DNS record for the ordering page points at a different host on 2024-09-02 than it does today, so the move of QR ordering to the static hosting vendor is 🟡 dated to between September 2024 and the read [^s5-5].
+**Stack and hosting**
 
-On-call is "shared across squads, one week in five" per the Platform Engineer ad (17 March 2026) ✅ [^s6-6]. The platform team is two people, 🟡, because the same ad says "join a platform team of two" and no other source gives a number. No SRE, DevOps or security role has ever been advertised ❔ not on the board, the archived careers page of 14 January 2025 or an aggregator search run on 9 May 2026 [^s6-15] [^s6-16]. The status page shows seven incidents in the 90 days to the read, two of them on payments, with a mean time to resolve of 41 minutes ✅ [^s2-10]. The payments incidents were 2026-02-27 and 2026-04-11, both "degraded card capture" ✅ [^s2-10].
+- The Platform Engineer ad names AWS eu-west-2, ECS on Fargate, Terraform, the git host's hosted CI and a hosted observability vendor ✅ [^s6-6].
+- The status page monitors the same observability vendor's endpoint and lists the API, the ordering page, the kitchen app and payments as four components ✅ [^s5-4] [^s2-10].
+- DNS resolves the API hostname to an application load balancer in eu-west-2 (`dig +short api.platterloop.example.org`, run 9 May 2026) ✅ [^s5-1].
+- The certificate log shows 23 hostnames issued since 2024-01-01, among them `kds.`, `pay.`, `events.` and `api-v2.` ✅ [^s5-2].
+- The `api-v2.` hostname is 🟡 as the home of the split services, because it appears in the certificate log and in no ad or page.
+- The archived DNS record for the ordering page points at a different host on 2024-09-02 than it does today, so the move of QR ordering to the static hosting vendor is 🟡 dated to between September 2024 and the read [^s5-5].
 
-Delivery cadence is monthly for the staff app on the store history ✅ [^s2-5], and the changelog carries 14 entries in 2026 to the read ✅ [^s2-7]. The CTO wrote in 2024 that the company runs "trunk-based development and deploys to production many times a day" (blog post, 12 June 2024) ✅ [^s3-2]. Whether that still holds under the split is 🟡, because the 2026 posts do not repeat the claim. Quality is one open ad, Test Automation Engineer, which asks for "our first dedicated QA hire" (22 April 2026) ✅ [^s6-11]; before it, testing was 🟡 left to squads, because no ad or post names anyone else doing it.
+**On-call and incidents**
+
+- On-call is "shared across squads, one week in five" per the Platform Engineer ad (17 March 2026) ✅ [^s6-6].
+- The platform team is two people, 🟡, because the same ad says "join a platform team of two" and no other source gives a number.
+- No SRE, DevOps or security role has ever been advertised ❔ not on the board, the archived careers page of 14 January 2025 or an aggregator search run on 9 May 2026 [^s6-15] [^s6-16].
+- The status page shows seven incidents in the 90 days to the read, two of them on payments, with a mean time to resolve of 41 minutes ✅ [^s2-10].
+- The payments incidents were 2026-02-27 and 2026-04-11, both "degraded card capture" ✅ [^s2-10].
+
+**Delivery and quality**
+
+- Delivery cadence is monthly for the staff app on the store history ✅ [^s2-5].
+- The changelog carries 14 entries in 2026 to the read ✅ [^s2-7].
+- The CTO wrote in 2024 that the company runs "trunk-based development and deploys to production many times a day" (blog post, 12 June 2024) ✅ [^s3-2].
+- Whether that still holds under the split is 🟡, because the 2026 posts do not repeat the claim.
+- Quality is one open ad, Test Automation Engineer, which asks for "our first dedicated QA hire" (22 April 2026) ✅ [^s6-11].
+- Before it, testing was 🟡 left to squads, because no ad or post names anyone else doing it.
 
 ## 4. Regulatory, quality and security
 
-Platterloop is a registered agent of a licensed e-money institution on the payments regulator's register, entry dated 2025-11-20 ✅ [^s1-8]. It is not itself licensed ❔ not on the register under its own name or either trading name. The payments page states that card data never touches Platterloop servers and that card capture uses the acquirer's hosted fields ✅ [^s2-4]; the PCI scope that implies is 🟡 the smallest self-assessment, because the page says so in effect and no attestation is published. The regulator's 2025 review of acquiring fees for small merchants is the document that sets what "from 1.4%" competes against ✅ [^s4-5].
+**Payments licensing and card data**
 
-The privacy policy lists 11 sub-processors and was updated on 1 March 2026 ✅ [^s3-6]. The mail records carry SPF and a DMARC policy of "p=none" on the day of the read ✅ [^s5-6]; that is an observation about mail configuration, not a finding to raise unless asked. No ISO 27001, SOC 2 or penetration test claim appears ❔ not on the security page, the pricing page or the help centre. No security role has been advertised ❔ not on the board or the aggregator search [^s6-16].
+- Platterloop is a registered agent of a licensed e-money institution on the payments regulator's register, entry dated 2025-11-20 ✅ [^s1-8].
+- It is not itself licensed ❔ not on the register under its own name or either trading name.
+- The payments page states that card data never touches Platterloop servers and that card capture uses the acquirer's hosted fields ✅ [^s2-4].
+- The PCI scope that implies is 🟡 the smallest self-assessment, because the page says so in effect and no attestation is published.
+- The regulator's 2025 review of acquiring fees for small merchants is the document that sets what "from 1.4%" competes against ✅ [^s4-5].
+
+**Privacy and security**
+
+- The privacy policy lists 11 sub-processors and was updated on 1 March 2026 ✅ [^s3-6].
+- The mail records carry SPF and a DMARC policy of "p=none" on the day of the read ✅ [^s5-6]; that is an observation about mail configuration, not a finding to raise unless asked.
+- No ISO 27001, SOC 2 or penetration test claim appears ❔ not on the security page, the pricing page or the help centre.
+- No security role has been advertised ❔ not on the board or the aggregator search [^s6-16].
 
 Two product rules shape the ordering and payments chapters. The ordering page carries allergen information per dish and says the product meets the 2021 pre-packed food labelling rules ✅ [^s2-2]. The tronc feature in payments followed the 2024 tips allocation rules, in force from 1 October 2024 ✅ [^s4-8] [^s2-7].
 
 ## 5. Org and ways of working
 
-The FY2024 accounts give an average of 118 employees for the year ✅ [^s1-2]. The Head of Engineering ad says the engineering team is 38 people and that the hire will "double the team over 18 months" (ad of 8 April 2026) ✅ [^s6-2]. Against 14 open roles, the ad's "double" is 🟡 a plan rather than a budget, because 14 is less than half of 38. The board JSON names five squads in the ad metadata: Ordering, Kitchen, Payments, Data and Platform ✅ [^s6-1]. The Engineering Manager, Ordering ad is the only manager role open and asks for "our first engineering manager" (15 April 2026) ✅ [^s6-10]; the squads today are 🟡 led by senior engineers reporting to the CTO, because the ad says "first" and the team page lists no managers.
+**Size and plan**
 
-Ads for backend roles say "hybrid, two days in the London office" ✅ [^s6-3], and the Go payments ad says "remote within the UK" ✅ [^s6-5]. The archived careers page of 14 January 2025 showed six open roles, all engineering ✅ [^s6-15]. A closed Senior Rails Engineer ad was first seen on an aggregator in June 2025 and is 🟡, because the aggregator page could not be opened [^s6-14]. Levels, pay bands and the interview loop are ❔ not in any of the ten ads read or on the careers page.
+- The FY2024 accounts give an average of 118 employees for the year ✅ [^s1-2].
+- The Head of Engineering ad says the engineering team is 38 people and that the hire will "double the team over 18 months" (ad of 8 April 2026) ✅ [^s6-2].
+- Against 14 open roles, the ad's "double" is 🟡 a plan rather than a budget, because 14 is less than half of 38.
 
-The CTO's 2024 post set the engineering style: "we pick boring technology and we pay for it with discipline, not with tooling" (blog post, 12 June 2024) ✅ [^s3-2]. The engineering blog carried four posts in 2025 and two in 2026 to the read ✅ [^s3-7] [^s3-3]. The January 2026 post explains the split as a reaction to "deploys that take the whole kitchen product down with an ordering bug" (20 January 2026) ✅ [^s3-3].
+**Squads and management**
+
+- The board JSON names five squads in the ad metadata: Ordering, Kitchen, Payments, Data and Platform ✅ [^s6-1].
+- The Engineering Manager, Ordering ad is the only manager role open and asks for "our first engineering manager" (15 April 2026) ✅ [^s6-10].
+- The squads today are 🟡 led by senior engineers reporting to the CTO, because the ad says "first" and the team page lists no managers.
+
+**Location, hiring history and levels**
+
+- Ads for backend roles say "hybrid, two days in the London office" ✅ [^s6-3].
+- The Go payments ad says "remote within the UK" ✅ [^s6-5].
+- The archived careers page of 14 January 2025 showed six open roles, all engineering ✅ [^s6-15].
+- A closed Senior Rails Engineer ad was first seen on an aggregator in June 2025 and is 🟡, because the aggregator page could not be opened [^s6-14].
+- Levels, pay bands and the interview loop are ❔ not in any of the ten ads read or on the careers page.
+
+**Engineering style**
+
+- The CTO's 2024 post set the engineering style: "we pick boring technology and we pay for it with discipline, not with tooling" (blog post, 12 June 2024) ✅ [^s3-2].
+- The engineering blog carried four posts in 2025 and two in 2026 to the read ✅ [^s3-7] [^s3-3].
+- The January 2026 post explains the split as a reaction to "deploys that take the whole kitchen product down with an ordering bug" (20 January 2026) ✅ [^s3-3].
 
 ## 6. Leadership
 
@@ -107,11 +179,26 @@ One-line reads, each 🟡 because they are readings of what each person has said
 
 ## 7. Market
 
-The trade body counted about 99,000 licensed hospitality sites in the UK in 2025 and put restaurant software spend at £1.1bn ✅ [^s4-1]. The industry survey recorded net closures of 3.2% of restaurant sites in 2025 ✅ [^s4-2]. Against that, Platterloop's homepage count went from 1,100 restaurants on the archived copy of 15 May 2024 to 2,400 on the day of the read ✅ [^s3-5] [^s2-8]; the growth is 🟡 partly from a 40-site group signed in November 2025, because that is the only customer the company names [^s2-9].
+**Market size and customer count**
 
-The analyst market map of March 2026 places 14 vendors in UK restaurant software and lists Platterloop among the "ordering-first" group, not the "till-first" group ✅ [^s4-4]. One competitor raised a Series C of £45m in September 2025 and says it will add payments ✅ [^s4-3]. The CEO's trade press interview of 11 February 2026 names the till-first vendors as the ones to beat and says "we will never build a till" ✅ [^s3-4].
+- The trade body counted about 99,000 licensed hospitality sites in the UK in 2025 and put restaurant software spend at £1.1bn ✅ [^s4-1].
+- The industry survey recorded net closures of 3.2% of restaurant sites in 2025 ✅ [^s4-2].
+- Against that, Platterloop's homepage count went from 1,100 restaurants on the archived copy of 15 May 2024 to 2,400 on the day of the read ✅ [^s3-5] [^s2-8].
+- The growth is 🟡 partly from a 40-site group signed in November 2025, because that is the only customer the company names [^s2-9].
 
-The base rate that matters for this role is what happens after a founder CTO moves to product. Comparable A, a restaurant ordering company of similar size, moved its founder CTO to product in 2023 and hired a Head of Engineering the same year; the trade press reported the hire's departure within 14 months ✅ [^s4-6]. Comparable B split a monolith under a new engineering leader in 2024 and reported the leader's exit before the split finished ✅ [^s4-7]. Two cases are not a base rate 🟡, and the reading they support is only that the role has a short clock unless the founder's remit is settled on day one.
+**Competitors**
+
+- The analyst market map of March 2026 places 14 vendors in UK restaurant software and lists Platterloop among the "ordering-first" group, not the "till-first" group ✅ [^s4-4].
+- One competitor raised a Series C of £45m in September 2025 and says it will add payments ✅ [^s4-3].
+- The CEO's trade press interview of 11 February 2026 names the till-first vendors as the ones to beat and says "we will never build a till" ✅ [^s3-4].
+
+**The base rate**
+
+The base rate that matters for this role is what happens after a founder CTO moves to product.
+
+- Comparable A, a restaurant ordering company of similar size, moved its founder CTO to product in 2023 and hired a Head of Engineering the same year; the trade press reported the hire's departure within 14 months ✅ [^s4-6].
+- Comparable B split a monolith under a new engineering leader in 2024 and reported the leader's exit before the split finished ✅ [^s4-7].
+- Two cases are not a base rate 🟡, and the reading they support is only that the role has a short clock unless the founder's remit is settled on day one.
 
 ## 8. Money
 
@@ -129,17 +216,41 @@ The base rate that matters for this role is what happens after a founder CTO mov
 | Pricing | £59 to £199 per site per month; payments "from 1.4%" | Read 2026-05-09 | Pricing and payments pages ✅ [^s2-1] [^s2-4] | ✅ [^s2-1] |
 | FY2025 revenue | not public | FY2025 | Would be in the FY2025 accounts, due by 2026-09-30 at the registry [^s1-1] | ❔ not filed at the read |
 
-Payments revenue of 18% of £9.6m on FY2024 is about £1.7m, and the CEO's "next three years" claim rests on growing that share ✅ [^s1-2] [^s3-4]; whether the take rate holds against the regulator's fee review is 🟡, because the review recommends transparency, not caps [^s4-5]. The registered office moved on 2 July 2025 to a larger London address ✅ [^s1-7].
+- Payments revenue of 18% of £9.6m on FY2024 is about £1.7m, and the CEO's "next three years" claim rests on growing that share ✅ [^s1-2] [^s3-4].
+- Whether the take rate holds against the regulator's fee review is 🟡, because the review recommends transparency, not caps [^s4-5].
+- The registered office moved on 2 July 2025 to a larger London address ✅ [^s1-7].
 
 ## 9. What it means for the mandate
 
-**Owns.** The ad gives the role the five squads, the platform team and the hiring plan, reporting to the CEO ✅ [^s6-2]. It does not give the role product, which moves with the CTO ✅ [^s6-2]. What the role owns in architecture is 🟡, because the ad says "own the technical roadmap" and the CTO's new remit is not written down anywhere public.
+**Owns.**
 
-**Inherits.** A monolith split that two ads say has started and none says has finished ✅ [^s6-3] [^s6-4]; a Go payments service that is the company's revenue bet and that two incidents in 90 days touched ✅ [^s3-7] [^s2-10]; a platform team of two with no SRE practice 🟡, resting on the Platform Engineer ad; a founder CTO moving sideways, which makes the first ninety days about trust with the people who built it 🟡, resting on the ad and the 2024 post; and 14 open roles against a "double the team" line, which makes the role a hiring role first ✅ [^s6-1] [^s6-2].
+- The ad gives the role the five squads, the platform team and the hiring plan, reporting to the CEO ✅ [^s6-2].
+- It does not give the role product, which moves with the CTO ✅ [^s6-2].
+- What the role owns in architecture is 🟡, because the ad says "own the technical roadmap" and the CTO's new remit is not written down anywhere public.
 
-**Is broken.** Reporting runs on read replicas that both data ads want to leave ✅ [^s6-7] [^s6-8]. Deploys couple the kitchen product to ordering bugs, by the company's own January 2026 account ✅ [^s3-3]. Testing has had no owner, by the April 2026 ad's own words ✅ [^s6-11]. Card capture degraded twice in the 90 days to the read ✅ [^s2-10]. The management layer is one open engineering manager role and nothing else ✅ [^s6-10].
+**Inherits.**
 
-**First quarter must deliver.** A written remit between the role and the CTO, since the public record has none ❔ not in the ad, the release or the team page. One slice of the split in production with a changelog entry, so that the "has started" line becomes a date 🟡. A payments incident review that the CEO can read, since payments is the stated bet ✅ [^s3-4]. The first engineering manager and the first QA hire in seat, since both ads call them "first" ✅ [^s6-10] [^s6-11]. A hiring plan that reconciles 14 roles with "double the team" 🟡, resting on the board count and the ad.
+- A monolith split that two ads say has started and none says has finished ✅ [^s6-3] [^s6-4].
+- A Go payments service that is the company's revenue bet and that two incidents in 90 days touched ✅ [^s3-7] [^s2-10].
+- A platform team of two with no SRE practice 🟡, resting on the Platform Engineer ad.
+- A founder CTO moving sideways, which makes the first ninety days about trust with the people who built it 🟡, resting on the ad and the 2024 post.
+- 14 open roles against a "double the team" line, which makes the role a hiring role first ✅ [^s6-1] [^s6-2].
+
+**Is broken.**
+
+- Reporting runs on read replicas that both data ads want to leave ✅ [^s6-7] [^s6-8].
+- Deploys couple the kitchen product to ordering bugs, by the company's own January 2026 account ✅ [^s3-3].
+- Testing has had no owner, by the April 2026 ad's own words ✅ [^s6-11].
+- Card capture degraded twice in the 90 days to the read ✅ [^s2-10].
+- The management layer is one open engineering manager role and nothing else ✅ [^s6-10].
+
+**First quarter must deliver.**
+
+- A written remit between the role and the CTO, since the public record has none ❔ not in the ad, the release or the team page.
+- One slice of the split in production with a changelog entry, so that the "has started" line becomes a date 🟡.
+- A payments incident review that the CEO can read, since payments is the stated bet ✅ [^s3-4].
+- The first engineering manager and the first QA hire in seat, since both ads call them "first" ✅ [^s6-10] [^s6-11].
+- A hiring plan that reconciles 14 roles with "double the team" 🟡, resting on the board count and the ad.
 
 ## 10. Vocabulary to have ready
 

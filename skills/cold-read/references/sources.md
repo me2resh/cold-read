@@ -31,6 +31,27 @@ What worked, by type. Mark anything that comes from a snippet rather than an ope
 
 Careers pages on the marketing site commonly return 403 to scripts; go to the ATS endpoint instead.
 
+## Products, customers and partners (compete and partner lenses)
+
+| What | Source | Notes |
+|---|---|---|
+| Price history | Archived copies of the pricing page (the archive lookup under lane 5) | Date each change from the first capture that shows it; say which captures were read |
+| What actually shipped | Changelog and release-notes pages, documentation and API reference, app version history, public repositories (`https://api.github.com/repos/<org>/<repo>/releases`) | The documentation is the true feature list; the homepage is the claim |
+| Usage of open components | Package registry counts, for example `https://api.npmjs.org/downloads/point/last-month/<package>` | A download count is not a customer count |
+| Integrations and marketplaces | The company's integrations page; cloud and app marketplace listings; partners' own "integrations" or "partners" pages | Read both directions: who lists them, and whom they list. A listing date is a fact; "preferred partner" wording is a claim |
+| Customers | The customer's own site or press, case studies with a named person, public procurement registers (Contracts Finder and Find a Tender in the UK, TED in the EU, USAspending in the US) | A logo on the company's site is 🟡. A contract award notice gives buyer, value and dates |
+| Reviews: customers | Consumer and software review sites (for example Trustpilot, G2, Capterra), app store ratings and reviews (the public iTunes lookup gives the rating and count per country), map listings | Score, count, date read, trend, recurring themes, company replies. Snippets are 🟡; the pages block scripts, so the reader may open one and pass it on |
+| Reviews: staff | Employer review sites (for example Glassdoor, Indeed, Kununu) | Same fields. Never log in or create an account to see more; a snippet or a reader-supplied copy is enough |
+| Reviews: partners and suppliers | Seller and partner forums, marketplace threads, community boards | Often the only place a partner's view appears; one thread is one account |
+| Reliability | The public status page and its incident history (many expose `/history` and `/api/v2/incidents.json`) | Count incidents by component and length; note gaps in the history |
+| Certifications | The issuer's own register (for ISO certificates, IAF CertSearch or the certification body; national schemes such as Cyber Essentials have a public certificate search) | ✅ only with scope, issue and expiry dates from the register or the certificate. A badge on a trust page is 🟡. SOC 2 reports have no public register |
+| Data handling | Privacy notice, sub-processor list, data processing terms | Who would hold the reader's or the reader's customers' data, and where |
+| Solvency signals | Registry charges and late filings; insolvency and court notices (The Gazette in the UK; court dockets where free copies exist); large-company payment reports where a country publishes them (the UK "check when businesses pay their suppliers" service) | Read the notice itself. A late filing is a fact, its cause is not |
+| Names before launch | Trade mark registers (UKIPO, EUIPO, USPTO) | New filings can show a product name months before it ships |
+| Ownership and control | Registry owners and directors, funding releases, the acquirer's filings if it has been bought | For the partner lens: who could sell the company, and whether it has changed hands before |
+
+Do not create an account, start a trial, request a demo or contact sales or support to read a competitor. A prospective partner may be asked openly by the reader; record the answers as "stated by the partner".
+
 ## Infrastructure (lane 5), all passive
 
 ```

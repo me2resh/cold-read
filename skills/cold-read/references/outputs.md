@@ -39,6 +39,20 @@ The first section keeps its heading ("The answer in one paragraph", or "The plat
 - **The evidence:** the three to five facts it rests on, each with its mark and source.
 - **The position** (deal, invest, position, compete), **The mandate** (join) or **The terms** (partner): what follows, marked 🟡 with the facts it rests on.
 
+## 2b. Reviews block (optional, fixed when used)
+
+When reviews exist for the company, add this table once, under the heading `Reviews as a gauge`, as a sub-block of the section named below. It adds no numbered section, so the skeletons do not change.
+
+`Voice | Site | Score | Reviews | Read on | Trend | Recurring themes | Mark`
+
+- Voice is `customers`, `staff` or `partners`. One row per site.
+- Score, count and date are facts when read from the page (✅ with the link) and 🟡 when taken from a snippet. Themes are always 🟡.
+- Under about 20 reviews the themes cell says "too few to read".
+- Below the table: one line on signs of gaming if any were seen, and one line naming any regulator complaint or court record that matches a recurring theme.
+- No reviewer is named, and no staff member named in a review is repeated.
+
+Where it goes: deal §7 (after the analyst split), join §5, invest §5, position §2 (as extra columns or beside the market map), compete §6 (under `Exposed`), partner §3b.
+
 ## 3. Skeleton A: deal (acquisition or integration)
 
 ```
@@ -227,6 +241,7 @@ A note is not finished until:
 - the header's footnote count is true (the checker recomputes it);
 - §4 of a deal note has ten dated rows or a "Not found" line, §7c has five comparables or says why fewer exist;
 - every quote has speaker, occasion and date;
+- reviews, where used, sit in the fixed reviews block with score, count and date, and nothing a review claims is marked ✅;
 - "not public" appears wherever a figure was wanted and not found, with the source that would carry it;
 - the shareable copy, if one is made, has the reader's section removed (§9 of a deal read, §7 of a compete read, §10 of a partner read) and no sentence that only an insider could have written;
 - before any copy is shared, it has been read as each person and company named in it would read it: no inference stated as a fact about them, and nothing that shows who wrote it unless the reader wants that.

@@ -24,7 +24,7 @@ Compete and partner read one named company. For a whole category where the compe
 1. **Corporate record**: filings, registries, deals, directors, cash.
 2. **Counterparty or product**: the other company in a deal, or products, pricing and money.
 3. **Says versus does**: investor statements against releases, privacy pages, app stores and migrations.
-4. **Market, analysts, base rate**: the analyst split, the regulators, five to eight comparables.
+4. **Market, analysts, base rate**: the analyst split, the regulators, five to eight comparables, and customer and staff reviews as a gauge.
 5. **Infrastructure fingerprint**: DNS, certificates, headers, archived pages. Passive, read-only, cited with the command.
 6. **Openings as the plan**: the job boards as next year's org chart.
 

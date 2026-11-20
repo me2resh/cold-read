@@ -1,13 +1,13 @@
 ---
 name: cold-read
-description: Reverse-engineer a company from the public record alone (filings, registries, press, job boards, app stores, DNS and certificate logs, analysts, comparables) and turn it into a sourced, dated reading of what the company says, what it does, and what happens next. Use it whenever someone wants to understand a company before investing in it, before interviewing with or joining it, when it is buying or being bought (deal terms, integration, who survives, whether the price was cheap), or to work out its market position against competitors. Trigger on phrases like "research this company", "what is going on at X", "is X a good place to join", "was X bought cheap", "what will the acquirer do with X", "read the job ads", "what is their stack", "who are the people I'll meet", "outside view", "due diligence from public sources", even when the user does not say "research".
+description: Reverse-engineer a company from the public record alone (filings, registries, press, job boards, app stores, DNS and certificate logs, analysts, comparables) and turn it into a sourced, dated reading of what the company says, what it does, and what happens next. Use it whenever someone wants to understand a company before investing in it, before interviewing with or joining it, when it is buying or being bought (deal terms, integration, who survives, whether the price was cheap), to work out its market position against competitors, to read one named competitor from where you stand (what they sell, where they are heading, where they are exposed, how they will respond to you), or to decide whether to tie yourself to a prospective partner, supplier, reseller or client (can they deliver, who decides, how they treat partners, what terms to ask for). Trigger on phrases like "research this company", "what is going on at X", "is X a good place to join", "was X bought cheap", "what will the acquirer do with X", "read the job ads", "what is their stack", "who are the people I'll meet", "outside view", "due diligence from public sources", "competitor analysis", "teardown of X", "how do we beat X", "battlecard", "should we partner with X", "vet this supplier", "partner due diligence", "can we rely on X", even when the user does not say "research". For a whole category where the competitors are not yet named, use market-read; Cold Read is for named companies.
 tools: Read, Write, Edit, Grep, Glob, Bash, WebSearch, WebFetch
-keywords: [company research, due diligence, outside view, acquisition, integration, job hunt, interview prep, stack, job boards, filings, comparables, base rate]
+keywords: [company research, due diligence, outside view, acquisition, integration, job hunt, interview prep, stack, job boards, filings, comparables, base rate, competitor analysis, partner due diligence, supplier vetting]
 ---
 
 # Cold Read
 
-Read a company the way an analyst, a candidate and an acquirer would, using only what is public, and write it up so that every claim is either cited or marked as inference. The method was built by reading a listed acquirer and its acquisitions and several prospective employers across unrelated sectors; it generalises because every company leaves the same kinds of trace.
+Read a company the way an analyst, a candidate, an acquirer, a competitor and a prospective partner would, using only what is public, and write it up so that every claim is either cited or marked as inference. The method was built by reading a listed acquirer and its acquisitions and several prospective employers across unrelated sectors; it generalises because every company leaves the same kinds of trace.
 
 ## The idea in one paragraph
 
@@ -23,6 +23,9 @@ A company cannot hide its plan. The plan is in what it files (money, deals, dire
 - **Dates on everything.** Say when each board was pulled and each page read; snippets go stale within weeks, careers pages reorganise, and a reading is only as good as its date.
 - **Name collisions are the common error in people research.** Check the employer and city on every hit before attributing a talk, a repo or a job ad to a person.
 - **Vendor and agency claims are not evidence about the company.** An agency's portfolio page saying it built the company's platform is marketing; note it, do not cite it.
+- **No pretexts with a competitor or a partner.** Do not sign up for a trial or a demo to read a competitor's product, do not ask its sales or support team questions under another identity, and do not ask its customers or staff under a pretext. A prospective partner can be asked openly, by the reader, in the reader's own name; what it answers is "stated by the partner" and stays 🟡 until a document confirms it.
+- **What arrives under an NDA is inside knowledge.** Once the reader has signed a confidentiality agreement with the company, anything received under it stays out of the public-record sections and out of every shareable copy.
+- **Read it as the subject before sharing.** Before a copy goes to anyone, read it as each person and company named in it would. Check what it says about them, whether any line is an inference stated as a fact, and whether it shows who wrote it. A competitor or partner read can reach its subject; write nothing in it you would not stand behind in front of them.
 
 ## Step 0: frame the job
 
@@ -30,8 +33,9 @@ Settle four things before searching, in one short exchange or by stating assumpt
 
 | Question | Why it matters |
 |---|---|
-| Which lens? invest, join, deal, position | Decides which lanes get depth and which output template to use (see `references/outputs.md`) |
-| What is the one question? | "Was it bought cheap", "will my function survive", "what will I inherit", "who wins the UK market" |
+| Which lens? invest, join, deal, position, compete, partner | Decides which lanes get depth and which output template to use (see `references/outputs.md`) |
+| What is the one question? | "Was it bought cheap", "will my function survive", "what will I inherit", "who wins the UK market", "where can we beat them", "should we sign with them, and on what terms" |
+| Where does the reader stand? (compete and partner only) | One or two lines the reader states: what they sell, to whom and at what price (compete), or what the partnership would be and what they would depend on (partner). These are the reader's own facts, recorded as "stated by the reader", never as findings |
 | Who reads the result, and can it be shared? | Shareable means no inside facts, no private names, no references to the reader's own notes |
 | Time box | A two-hour read is six lanes at snippet depth; a day is full lanes with raw outputs saved |
 
@@ -49,7 +53,7 @@ Each lane is a self-contained brief in `references/lanes.md` (read it before spa
 | 6 Openings as the plan | What the company is building, where, at what seniority, and what it has stopped hiring | Applicant-tracking-system public APIs and boards, aggregator snippets for closed ads |
 | 7 People | Who the reader will meet or report to, what they have said and written, one-line read of what each will test | Team pages, press, talks, podcasts, books, blogs, GitHub, conference bios, filings for directors |
 
-Lane 7 runs only for the join lens or when a specific person matters to the question. Lane 5 feeds every lens; its findings are quoted to the company only once confirmed in words elsewhere.
+Lane 7 runs for the join lens, for the partner lens (who signs and who the reader would work with), or when a specific person matters to the question. Lane 5 feeds every lens; its findings are quoted to the company only once confirmed in words elsewhere.
 
 `references/sources.md` lists the sources by country and type, with the commands and public endpoints that worked (ATS APIs, certificate search, archive lookups, app store search), and the fallbacks when a site blocks fetches.
 
@@ -64,7 +68,7 @@ The standard the note has to meet, in brief (the specification has the exact tab
 - Sources are footnotes grouped by lane at the end, so the note can be rebuilt from them.
 - A full deal read is long because the record is long: hundreds of lines, one to two hundred footnotes, ten dated timeline rows, five to eight comparables, ten roles to watch for, a dated signals table. Short is right only when the record is thin, and the ❔ lines then say what was looked at.
 
-Before finishing, run `python3 scripts/check_read.py <note.md>` and fix every failure it prints. Keep the shareable copy separate from the working copy if the working copy holds inside facts, personal implications or private references; the shareable copy keeps the "What it means for the reader" heading with the line "Removed from the shareable copy."
+Before finishing, run `python3 scripts/check_read.py <note.md>` and fix every failure it prints. Keep the shareable copy separate from the working copy if the working copy holds inside facts, personal implications or private references; the shareable copy keeps the reader's section heading ("What it means for the reader", or "Head to head" in a compete read) with the line "Removed from the shareable copy."
 
 ## Lens notes
 
@@ -75,6 +79,10 @@ Before finishing, run `python3 scripts/check_read.py <note.md>` and fix every fa
 **Deal.** Two companies side by side, then the integration timeline, then the base rate from comparables: brand retirement order, platform absorption window (usually 12 to 24 months after the second close), leadership exits at the first retention cliff, which functions move first (usually duplicated leadership and back office, then platform and infrastructure, then product engineering). End with the surviving roles and the cutover window, both marked 🟡, and a legal pointer where employees are affected.
 
 **Position.** Market map with named competitors, pricing where public, the moat as the purchase price allocation reveals it (channels versus technology versus brand), the regulatory climate as the real constraint, and the two or three dated events that would change the ranking.
+
+**Compete.** One named competitor, read from where the reader stands. The question is usually "where do they beat us, where can we beat them, and what will they do next". Lanes 2, 3 and 6 carry the weight: what each tier sells and gates, with prices dated from archived pricing pages; what shipped in the last twelve months from release notes, changelogs, repositories and app version histories; and the openings as their roadmap. Traction is read from what the record will bear (accounts, funding, customers who name them, marketplace and review counts), and "not public" is written wherever it will not. Strengths rest on ✅ facts; exposures are 🟡 and name the facts they rest on. The likely response to a move is read from how the competitor answered earlier entrants: dated price changes, copied features, comparison pages, acquisitions. The head-to-head table puts the competitor's cited facts beside the reader's own stated ones and is the part to remove before sharing. For a category where the competitors are not yet named, run market-read first and bring the names here.
+
+**Partner.** A prospective partner the reader would depend on: a reseller or channel, a technology or integration partner, a supplier, a large client, a joint venture, a co-founder's company. The question is usually "should we tie ourselves to them, on what terms, and how would we know early that it is going wrong". Start with the legal entity that would sign, not the brand: its owners, directors, accounts, charges and late filings (lane 1). Then whether it can deliver (money, capacity, customers who confirm it themselves, certifications checked on the issuer's register), how it has treated earlier partners (the partner programme as written against what happened to named partners, and whether it has ever launched against one), what it wants from this, where interests conflict, and what breaks if it stops or is sold. Lane 6 matters twice: hiring in the function the reader depends on is capacity, and an ad to build what the reader would supply is a plan to replace them. The read ends with terms to ask for, each tied to a fact in the note, and questions to put to the partner openly. A reference the partner supplies is the partner's choice; look for one it did not choose.
 
 ## Pitfalls learned the hard way
 

@@ -15,7 +15,7 @@ Site with example views: https://me2resh.github.io/cold-read/
 | Deal | What happens to the acquired company, and was it cheap? | Two deals side by side, timeline, base rate, cutover window, surviving roles |
 | Position | Who wins the market, and what would change it? | Market map, the moat as the filings show it, three dated events |
 | Compete | Where can we beat this competitor, and what will it do next? | Tiers and dated prices, what shipped, the openings as a roadmap, strengths and exposures, head to head, likely responses |
-| Partner | Should we tie ourselves to them, and on what terms? | Who signs and who owns them, money and capacity, how they treated earlier partners, conflicts, dependency and exit, terms to ask for |
+| Partner | Should we tie ourselves to them, and on what terms? | Who signs and who owns them, money and capacity, how they treated earlier partners, business model and pricing, conflicts, dependency and exit, terms to ask for |
 
 Compete and partner read one named company. For a whole category where the competitors are not yet named, use the sibling skill Market Read and bring the names here.
 

@@ -209,6 +209,8 @@ Fixed tables, exact columns:
 ### 3b. Capacity and track record
 ## 4. How they treat partners
 ## 5. What they want from this
+### 5a. Business model and how they charge
+### 5b. What they want
 ## 6. Where interests conflict
 ## 7. Dependency and exit
 ## 8. What it says and what it does
@@ -222,7 +224,8 @@ Fixed tables, exact columns:
 - §3a: `Item | Figure | Period | Source | Mark` (last accounts, cash, secured lenders and charges, going-concern wording, late filings, funding, court or insolvency notices, payment record where a register carries one).
 - §3b: `Evidence | What it shows | Date | Mark` (customers who confirm it themselves, sites and capacity, certifications from the issuer's register with scope and expiry, incident history, hiring in the function the reader depends on).
 - §4: `Partner or programme | Since | What happened | Source | Mark`; at least three named relationships or a "Not found" line. Say plainly whether the company has ever launched a product against a partner, dropped one or bought one.
-- §5: 🟡 bullets, one per motive, each naming the facts it rests on.
+- §5a: `Service | Who pays | What is charged | Published price | Mark`, one row per service or revenue line, plus the main costs the company pays out (staff paid by the job, suppliers) where the record shows them. Write "not public" where no price is published and name the source that would carry it. Below the table, bullets for: the model in one line; the revenue split and concentration as far as public; how costs move with volume; and what the model means for the kind of deal the reader has in mind. A partner read is not finished without this block: how a company earns decides what it will ask of a partner.
+- §5b: 🟡 bullets, one per motive, each naming the facts it rests on.
 - §6: `Area | What the record shows | Why it conflicts | Mark` (a competing product of their own, service to the reader's competitors, exclusivity given to others, owners or directors with interests elsewhere).
 - §7: `Dependency | What breaks if they stop | How it could be replaced | Rests on`, then one line on change of control: who owns them, whether they are for sale or have been sold before, marked.
 - §8: `Date | Who, where | Quote | Then what happened | Mark`.

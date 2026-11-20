@@ -32,7 +32,8 @@ SKELETONS = {
                 "8. How they are likely to respond", "9. Signals to watch, dated", "10. Sources by lane"],
     "partner": ["1. The answer in one paragraph", "2. Who they are and who decides", "3. Can they deliver",
                 "3a. Money and staying power", "3b. Capacity and track record", "4. How they treat partners",
-                "5. What they want from this", "6. Where interests conflict", "7. Dependency and exit",
+                "5. What they want from this", "5a. Business model and how they charge", "5b. What they want",
+                "6. Where interests conflict", "7. Dependency and exit",
                 "8. What it says and what it does", "9. Terms to ask for and questions to put openly",
                 "10. What it means for the reader", "11. Signals to watch, dated", "12. Sources by lane"],
     "people": None,  # numbered per person; checked structurally below

@@ -107,11 +107,27 @@ The first half is the money. The second is the depots, the vehicles and the part
 
 ## 5. What they want from this
 
+### 5a. Business model and how they charge
+
+| Service | Who pays | What is charged | Published price | Mark |
+|---|---|---|---|---|
+| Distribution of partner brands to shops | The shop pays Dunmarrow; Dunmarrow pays the supplier | The margin between the supplier's price and the shop's price | not public; the accounts give a blended gross margin of 12.5 per cent for 2025 | ✅ [^s1-1] the blended figure; ❔ the margin by supplier, not on the supplier terms page or the programme page [^s2-2][^s2-1] |
+| Own-label range | The shop | Dunmarrow's own price, with no supplier brand between it and the shop | not public | ✅ [^s2-5] the range; ❔ its prices, not on the range page |
+| Supplier partner programme | Not stated | The page promises a joint growth plan and a named account manager and names no fee | none | ✅ [^s2-1]; ❔ any listing or marketing charge, not on the page or in the supplier terms [^s2-2] |
+| Suppliers (a cost to Dunmarrow) | Dunmarrow | Goods bought on credit: published terms of 30 days, an average of 58 days taken in 2026 | Terms published; prices not public | ✅ [^s2-2][^s1-9] |
+
+- The model in one line: Dunmarrow buys chilled food on credit, delivers it from two depots and keeps the margin, and it is adding own-label lines where it keeps more of it 🟡, resting on the accounts, the supplier terms and the range page [^s1-1][^s2-2][^s2-5].
+- The split of revenue between partner brands and own label is not public ❔ not in the 2025 accounts, which have no segment note [^s1-1].
+- Margin is the pressure point: gross margin fell from 14.0 to 12.5 per cent in a year while turnover grew ✅ [^s1-1][^s1-2].
+- Supplier credit funds the business: paying in 58 days against 30 means each added supplier adds free working capital 🟡, resting on the payment report and the creditors note [^s1-9][^s1-1].
+- For the reader this means the price Dunmarrow takes is set supplier by supplier in private, and the reader's own margin and payment dates are the two numbers to fix in writing 🟡, resting on the table above [^s2-2][^s1-9].
+
+### 5b. What they want
+
 - Volume for the second depot: a depot opened on 22 September 2025, company borrowings up from GBP 3.2m to GBP 6.8m and no hiring there point to capacity that needs filling 🟡, resting on the news post, the creditors notes and the board [^s3-7][^s1-1][^s6-1].
 - Margin: gross margin fell 1.5 points in a year, and 23 of the 27 own-label distributors in the survey gave margin as their main reason 🟡, resting on the accounts and the survey and not on any Dunmarrow statement [^s1-1][^s4-1].
 - A position in chilled meals: the 2026 ads say the own-label range will go "from yoghurt into chilled meals and soups", and an exclusive brand in that category supplies the sales by shop such a range is planned from 🟡, resting on the two ads [^s6-4][^s6-5].
 - Contracted supply to show a buyer: a majority owner that is an investment firm sells at some point, and multi-year exclusive supply agreements are an asset a seller can list 🟡, resting on the owner record and one comparable sale, with the holding period itself not public [^s1-6][^s4-2].
-- Working capital: at 58 days against 30, each added supplier adds to the trade credit that funds the business 🟡, resting on the payment report and the creditors note [^s1-9][^s1-1].
 
 ## 6. Where interests conflict
 
